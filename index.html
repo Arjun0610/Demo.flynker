@@ -3,13 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flynker — Fashion, Finally Personal</title>
-<meta name="description" content="Flynker is disrupting catalogue-based fashion e-commerce with an AI stylist, shoppable creator style capsules, and direct-to-designer bespoke commissioning.">
+<title>Flynker — Fashion That Fits Before It Ships</title>
+<meta name="description" content="Flynker is moving fashion from catalogue shopping to personalised and customised shopping: an AI stylist, shoppable creator Style Capsules, made-to-order designer ateliers and a creator sales force paid only on delivered orders. Raising a ₹1.5 Cr pre-seed.">
+<meta property="og:title" content="Flynker — Fashion That Fits Before It Ships">
+<meta property="og:description" content="AI + creator commerce for personalised and customised fashion. Four apps built, live store at flynker.com. Raising ₹1.5 Cr pre-seed.">
+<meta property="og:image" content="https://demo.flynker.com/assets/flynker_logo.png">
 <link rel="icon" type="image/png" href="assets/flynker_icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="v2.css">
 </head>
 <body>
 
@@ -22,14 +26,16 @@
       <img src="assets/flynker_icon.png" alt="Flynker" class="brand-mark">
       <span>Flynker</span>
     </a>
-    <nav class="nav-links">
-      <a href="#vision">Vision</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#shift">Vision</a>
+      <a href="#engines">RTO &amp; CAC</a>
       <a href="#product">Product</a>
-      <a href="#why-now">Why Now</a>
-      <a href="#market">Market</a>
-      <a href="#roadmap">Roadmap</a>
+      <a href="#ecosystem">Platform</a>
+      <a href="#creators">Creators</a>
+      <a href="#model">Business</a>
+      <a href="#ask">The Ask</a>
     </nav>
-    <a href="https://calendly.com/tharunkarthikeya98/30min" target="_blank" rel="noopener" class="btn btn-nav">Get the Pitch Deck</a>
+    <a href="https://calendly.com/tharunkarthikeya98/30min" target="_blank" rel="noopener" class="btn btn-nav">Book a Founder Call</a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -39,17 +45,19 @@
   <div class="hero-glow"></div>
   <div class="hero-inner">
     <div class="hero-copy" data-reveal>
-      <p class="eyebrow">Seed-Stage · Fashion-Tech · AI Commerce</p>
-      <h1 class="display-xl">Fashion shopping was built for <span class="strike">catalogues.</span><br>We built it for <em>you.</em></h1>
-      <p class="lede">Flynker replaces endless product grids with an AI stylist who knows your body, your budget and your vibe — plus a live creator economy where you shop real people's outfits in one tap, and designers who'll build something that exists only for you.</p>
+      <p class="eyebrow">Pre-seed 2026 · AI + Creator Commerce · India → the world</p>
+      <h1 class="display-xl">Fashion that fits<br><em>before it ships.</em></h1>
+      <p class="lede">For twenty years, online fashion has been a <strong>catalogue</strong>: the same grid for everyone. Flynker turns it into a <strong>conversation</strong>. An AI stylist that knows your skin tone and body, creators who style real outfits you buy in one tap, and designers who make pieces only for you. Every creator and designer gets a storefront and a sales force. For brands, that means fewer returns (RTO) and cheaper customers (CAC).</p>
       <div class="hero-cta">
-        <a href="mailto:info@flynker.com" class="btn btn-primary">Partner With Us</a>
-        <a href="#product" class="btn btn-ghost">See the Product ↓</a>
+        <a href="#engines" class="btn btn-primary">How We Cut RTO &amp; CAC</a>
+        <a href="#ask" class="btn btn-ghost">The ₹1.5 Cr Ask ↓</a>
       </div>
       <div class="trust-bar">
-        <span class="pill">📱 Live Android App</span>
-        <span class="pill">✨ AI-Powered Stylist</span>
-        <span class="pill">🛍️ Creator Commerce Engine</span>
+        <span class="pill">🛍️ Live store · flynker.com</span>
+        <span class="pill">📱 4 apps built</span>
+        <span class="pill">✨ AI in production</span>
+        <span class="pill">🎯 Confidence Engine cuts RTO</span>
+        <span class="pill">🤝 Creator Corner cuts CAC</span>
       </div>
     </div>
     <div class="hero-visual" data-reveal>
@@ -58,15 +66,15 @@
           <img src="assets/screens/style_capsule.png" alt="Flynker Style Capsule feed">
         </div>
         <div class="phone phone-front">
-          <img src="assets/screens/aria_chat.png" alt="Aria AI Stylist chat">
+          <img src="assets/screens/aria_chat.png" alt="Aria AI stylist chat">
         </div>
         <div class="float-card float-card-1">
-          <span class="fc-label">Aria says</span>
-          <span class="fc-body">"Neutral palette, tailored fit — here's your look ✨"</span>
+          <span class="fc-label">Aria · skin-tone AI</span>
+          <span class="fc-body">"Warm undertone: emerald and mustard will glow on you ✨"</span>
         </div>
         <div class="float-card float-card-2">
-          <span class="fc-label">Style Capsule</span>
-          <span class="fc-body">Buy the complete outfit in 1 tap</span>
+          <span class="fc-label">Creator earns</span>
+          <span class="fc-body">Commission credited the moment it's delivered</span>
         </div>
       </div>
     </div>
@@ -74,110 +82,214 @@
   <div class="scroll-cue"><span></span></div>
 </section>
 
-<!-- ===== PROBLEM ===== -->
-<section class="section problem" id="vision">
-  <div class="container">
-    <p class="eyebrow center" data-reveal>The Problem</p>
-    <h2 class="display-lg center" data-reveal>Online fashion still feels like <em>2010.</em></h2>
-    <p class="section-lede center" data-reveal>Every marketplace gave shoppers more products. Nobody gave them more clarity. GenZ and millennial shoppers are drowning in choice and starved for taste.</p>
+<!-- ===== PROOF STRIP ===== -->
+<section class="proof">
+  <div class="container proof-grid">
+    <div class="proof-item" data-reveal><strong>400+</strong><span>products live on flynker.com, with COD and Google Shopping</span></div>
+    <div class="proof-item" data-reveal><strong>4</strong><span>apps built: Shopper, Creator &amp; Designer, Brand, Admin</span></div>
+    <div class="proof-item" data-reveal><strong>1</strong><span>real-time backend syncing orders across every app in seconds</span></div>
+    <div class="proof-item" data-reveal><strong>0</strong><span>commission paid on undelivered orders, enforced in the database</span></div>
+  </div>
+</section>
 
-    <div class="problem-grid">
-      <div class="problem-card" data-reveal>
-        <span class="problem-num">01</span>
-        <h3>Endless scroll, zero guidance</h3>
-        <p>Catalogue after catalogue of near-identical products, with no one to tell you what will actually look good on <em>you.</em></p>
+<!-- ===== THE SHIFT ===== -->
+<section class="section shift" id="shift">
+  <div class="container">
+    <p class="eyebrow center" data-reveal>The Shift</p>
+    <h2 class="display-lg center" data-reveal>The catalogue era is ending.<br>The <em>personal era</em> is starting.</h2>
+    <p class="section-lede center" data-reveal>Myntra, Amazon and Meesho won the last decade by showing more products. The next decade goes to whoever helps each shopper find the <em>right</em> one. Flynker is built for that.</p>
+
+    <div class="shift-board" data-reveal>
+      <div class="shift-col shift-old">
+        <span class="shift-tag">Catalogue shopping · today</span>
+        <ul>
+          <li>Thousands of near-identical products in a grid</li>
+          <li>The same results for every body and skin tone</li>
+          <li>Garments shown flat or on one catalogue model</li>
+          <li>Inspiration on Instagram, checkout somewhere else</li>
+          <li>Custom tailoring only offline, by word of mouth</li>
+          <li>Brands pay for ads up front, then pay again for returns</li>
+        </ul>
       </div>
-      <div class="problem-card" data-reveal>
-        <span class="problem-num">02</span>
-        <h3>One-size-fits-all discovery</h3>
-        <p>The same grid, the same filters — whether you're 18 or 45, size 6 or 16, dressing for a wedding or a Tuesday.</p>
-      </div>
-      <div class="problem-card" data-reveal>
-        <span class="problem-num">03</span>
-        <h3>Inspiration without instant commerce</h3>
-        <p>Creators sell the look on Instagram — but "shop it" means five browser tabs, a screenshot, and a guess at the right shade.</p>
-      </div>
-      <div class="problem-card" data-reveal>
-        <span class="problem-num">04</span>
-        <h3>Nowhere to go bespoke</h3>
-        <p>Want something made just for you — a fit, a fabric, a heritage weave? No mainstream marketplace connects you to the maker.</p>
+      <div class="shift-arrow" aria-hidden="true">→</div>
+      <div class="shift-col shift-new">
+        <span class="shift-tag">Flynker · personalised + customised</span>
+        <ul>
+          <li>An AI stylist curates a short list just for you</li>
+          <li>Picks matched to your skin tone, body type and budget</li>
+          <li>Outfits styled and worn by real creators</li>
+          <li>Watch a Flynk, buy the full look in one tap</li>
+          <li>Commission a bespoke piece over chat or video</li>
+          <li>Creators are paid only after the order is delivered</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== SOLUTION / PRODUCT PILLARS ===== -->
+<!-- ===== PROBLEM ===== -->
+<section class="section problem" id="problem">
+  <div class="container">
+    <p class="eyebrow center" data-reveal>The Problem</p>
+    <h2 class="display-lg center" data-reveal>Great designers. <em>Broken economics.</em></h2>
+    <p class="section-lede center" data-reveal>A small fashion brand pays twice: once in ads to win the customer, and again when the parcel comes back. Most returns come down to one question nobody answered before checkout: <strong>“Will it suit me?”</strong></p>
+
+    <div class="problem-grid">
+      <div class="problem-card" data-reveal>
+        <span class="problem-num">CAC</span>
+        <h3>Paying to be seen</h3>
+        <p>Independent labels compete for the same Instagram and Google feeds, and the cost of every new customer keeps rising.</p>
+      </div>
+      <div class="problem-card" data-reveal>
+        <span class="problem-num">RTO</span>
+        <h3>Paying to get it back</h3>
+        <p>Cash-on-delivery fashion orders get refused or returned. Shipping is paid twice and stock comes back damaged.</p>
+      </div>
+      <div class="problem-card" data-reveal>
+        <span class="problem-num">FIT</span>
+        <h3>Photos aren't reality</h3>
+        <p>Skin tone, body type and fit can't be seen on a catalogue model, so the parcel disappoints at the door.</p>
+      </div>
+      <div class="problem-card" data-reveal>
+        <span class="problem-num">GAP</span>
+        <h3>Inspiration lives elsewhere</h3>
+        <p>Creators sell the look on Instagram, but buying it means screenshots, five tabs and a guess.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RTO + CAC: CONFIDENCE ENGINE + CREATOR CORNER ===== -->
+<section class="section engines" id="engines">
+  <div class="container">
+    <p class="eyebrow center" data-reveal>Solving D2C's two biggest bottlenecks</p>
+    <h2 class="display-lg center" data-reveal>Two engines built into Flynker.<br>One cuts <em>RTO.</em> One cuts <em>CAC.</em></h2>
+    <p class="section-lede center" data-reveal>Every D2C fashion brand in India is squeezed from both ends: it pays more and more to win a customer, then loses money again when the parcel comes back. Other marketplaces leave both problems with the brand. Flynker builds the fix into the platform.</p>
+
+    <div class="engine-grid">
+      <article class="engine-card" data-reveal>
+        <div class="engine-head">
+          <span class="engine-badge">Bottleneck 1 · RTO</span>
+          <h3>The Confidence Engine</h3>
+          <p class="engine-line">Answers “Will it suit me?” <strong>before</strong> the shopper adds to cart, not at the doorstep.</p>
+        </div>
+        <div class="engine-body">
+          <p class="engine-why"><strong>Why orders come back:</strong> wrong fit, a colour that doesn't suit, a product that looked different in the photo, or an impulse COD order the buyer never really wanted.</p>
+          <ol class="engine-steps">
+            <li><span>01</span><div><strong>Reads the shopper</strong>Aria analyses skin tone, matched to a published reference scale, plus body type and style from one selfie.</div></li>
+            <li><span>02</span><div><strong>Matches fit and colour</strong>Recommendations are filtered to what flatters <em>this</em> person, not what's trending for everyone.</div></li>
+            <li><span>03</span><div><strong>Shows it before buying</strong>Virtual try-on, Outfit Studio and AI-generated complete-look previews.</div></li>
+            <li><span>04</span><div><strong>Proves it on real people</strong>Garments worn and styled by creators in Flynks and Style Capsules, not flat catalogue shots.</div></li>
+            <li><span>05</span><div><strong>Removes the incentive to oversell</strong>Creators are paid only on delivered orders, so nobody pushes orders that will come back.</div></li>
+          </ol>
+          <p class="engine-result">Result: the shopper buys with <strong>confidence</strong>, so fewer COD refusals and returns, less shipping paid twice, and less damaged stock.</p>
+        </div>
+      </article>
+
+      <article class="engine-card engine-card-dark" data-reveal>
+        <div class="engine-head">
+          <span class="engine-badge">Bottleneck 2 · CAC</span>
+          <h3>The Creator Corner</h3>
+          <p class="engine-line">An in-built creator sales force, paid only for <strong>delivered</strong> sales instead of ad impressions.</p>
+        </div>
+        <div class="engine-body">
+          <p class="engine-why"><strong>Why acquisition is so expensive:</strong> every brand bids for the same Instagram and Google feeds, pays up front for reach, and pays again to re-win the same customer.</p>
+          <ol class="engine-steps">
+            <li><span>01</span><div><strong>Creators and designers live inside the app</strong>Creator Corner is a directory of fashion creators and designers, each with a profile, Flynks, Style Capsules and a channel.</div></li>
+            <li><span>02</span><div><strong>They style brands' products</strong>Brands list once; any creator can feature their pieces in looks and short videos.</div></li>
+            <li><span>03</span><div><strong>Every sale is attributed</strong>Capsule and product sales are tracked to the creator automatically at checkout.</div></li>
+            <li><span>04</span><div><strong>Paid on delivery, enforced in the database</strong>Commission is credited only when the order is delivered, so brands pay for real sales, not clicks.</div></li>
+            <li><span>05</span><div><strong>Channels bring buyers back</strong>Followers return for drops and chats, so a repeat order costs almost nothing to win.</div></li>
+          </ol>
+          <p class="engine-result">Result: <strong>no upfront ad spend</strong> for brands, and one shared audience instead of every brand buying each customer alone.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="engine-together" data-reveal>
+      <p><strong>Together they reinforce each other.</strong> The Creator Corner brings shoppers in cheaply; the Confidence Engine makes sure what they buy stays bought. Every delivered order and every return teaches Aria more about what suits whom, so both engines get better as Flynker grows.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCT PILLARS ===== -->
 <section class="section product" id="product">
   <div class="container">
-    <p class="eyebrow center" data-reveal>The Flynker Way</p>
+    <p class="eyebrow center" data-reveal>The Product</p>
     <h2 class="display-lg center" data-reveal>We rebuilt shopping around <em>the person,</em><br>not the product.</h2>
-    <p class="section-lede center" data-reveal>Six systems working together — already live inside a real, working Android app.</p>
+    <p class="section-lede center" data-reveal>Six connected systems, already working in a real Android app on a live backend.</p>
 
     <div class="pillars">
 
       <article class="pillar" data-reveal>
         <div class="pillar-media">
-          <div class="phone-sm"><img src="assets/screens/aria_chat.png" alt="Aria AI Stylist"></div>
+          <div class="phone-sm"><img src="assets/screens/aria_chat.png" alt="Aria AI stylist" loading="lazy"></div>
         </div>
         <div class="pillar-copy">
-          <span class="pillar-tag">01 · AI Styling</span>
-          <h3>Aria, your AI stylist</h3>
-          <p>Tell Aria the occasion, your vibe, your budget — even upload a selfie. She reads skin tone, body type and personal style to hand-pick real, shoppable outfits from the live catalogue. Not a script. A conversation.</p>
+          <span class="pillar-tag">01 · Personalised · AI stylist</span>
+          <h3>Aria knows your skin tone, body and budget</h3>
+          <p>Upload a selfie and tell Aria the occasion. She reads skin tone, body type and style, then picks real, in-stock pieces from the live catalogue. Skin tone is matched against a published reference scale, not guessed.</p>
+          <ul class="pillar-points"><li>Selfie in, outfit out</li><li>Grounded skin-tone classification</li><li>Every pick is shoppable</li></ul>
         </div>
       </article>
 
       <article class="pillar reverse" data-reveal>
         <div class="pillar-media">
-          <div class="phone-sm"><img src="assets/screens/outfit_studio.png" alt="AI Outfit Studio"></div>
+          <div class="phone-sm"><img src="assets/screens/outfit_studio.png" alt="AI Outfit Studio" loading="lazy"></div>
         </div>
         <div class="pillar-copy">
-          <span class="pillar-tag">02 · Generative Outfitting</span>
-          <h3>AI Outfit Studio</h3>
-          <p>Smart slot-locking builds a complete, cohesive outfit — top, bottom, shoes, accessory — in three taps. Visual-search and skin-tone AI keep every recommendation flattering, not just trending.</p>
+          <span class="pillar-tag">02 · Personalised · Generative outfitting</span>
+          <h3>Outfit Studio and “Generate Complete Look”</h3>
+          <p>Lock a piece you love and Flynker builds the rest: top, bottom, shoes and accessory in three taps. Creators can also generate a photo of the complete look from the items in a capsule, so shoppers see the whole outfit before they buy.</p>
+          <ul class="pillar-points"><li>Bigger baskets: full outfits, not single items</li><li>See it before you buy it</li></ul>
         </div>
       </article>
 
       <article class="pillar" data-reveal>
         <div class="pillar-media">
-          <div class="phone-sm"><img src="assets/screens/style_capsule.png" alt="Style Capsule feed"></div>
+          <div class="phone-sm"><img src="assets/screens/style_capsule.png" alt="Style Capsules" loading="lazy"></div>
         </div>
         <div class="pillar-copy">
-          <span class="pillar-tag">03 · Creator Commerce</span>
-          <h3>Style Capsules</h3>
-          <p>Real creators publish complete, curated outfits straight to the feed. One tap adds the whole look to the bag — or shoppers drill into any single piece and buy just that.</p>
+          <span class="pillar-tag">03 · Creator commerce</span>
+          <h3>Style Capsules: shop a real person's outfit in one tap</h3>
+          <p>Creators publish complete looks from the multi-brand catalogue. Shoppers buy the whole capsule or any single piece. Every sale is attributed to the creator automatically at checkout.</p>
+          <ul class="pillar-points"><li>Attribution captured at checkout</li><li>Commission credited on delivery</li></ul>
         </div>
       </article>
 
       <article class="pillar reverse" data-reveal>
         <div class="pillar-media">
-          <div class="phone-sm"><img src="assets/screens/my_channels.png" alt="Creator and designer channels"></div>
+          <div class="phone-sm"><img src="assets/screens/channel_capsule.png" alt="Flynks and creator channels" loading="lazy"></div>
         </div>
         <div class="pillar-copy">
           <span class="pillar-tag">04 · Community</span>
-          <h3>Creator &amp; designer channels</h3>
-          <p>Fashion becomes a community, not a feed. Shoppers join creator channels, vote on drops, chat directly — turning passive followers into a recurring, shoppable audience.</p>
+          <h3>Flynks and channels</h3>
+          <p>Flynks are short, shoppable fashion videos inside the feed. Followers join creator and designer channels to chat, vote on drops and come back to buy again, so brands don't pay twice for the same customer.</p>
+          <ul class="pillar-points"><li>Short video with products tagged</li><li>Repeat buyers through channels</li></ul>
         </div>
       </article>
 
       <article class="pillar" data-reveal>
         <div class="pillar-media">
-          <div class="phone-sm"><img src="assets/screens/atelier.png" alt="Designer Atelier bespoke couture"></div>
+          <div class="phone-sm"><img src="assets/screens/atelier.png" alt="Designer ateliers" loading="lazy"></div>
         </div>
         <div class="pillar-copy">
-          <span class="pillar-tag">05 · Bespoke Couture</span>
-          <h3>Designer ateliers</h3>
-          <p>Commission custom, made-to-order pieces directly from specialist designers — heritage bridal wear, hand-woven textiles, tailored silhouettes. Something no catalogue marketplace offers.</p>
+          <span class="pillar-tag">05 · Customised · Made to order</span>
+          <h3>Designer ateliers: fashion made only for you</h3>
+          <p>Commission heritage bridal wear, hand-woven textiles and tailored pieces directly from specialist designers. Fit, fabric and expectations are agreed over chat, voice or video before a single stitch, so custom orders arrive right.</p>
+          <ul class="pillar-points"><li>Customisation requests with Chat / Call / Video</li><li>A storefront for every designer</li></ul>
         </div>
       </article>
 
       <article class="pillar reverse" data-reveal>
         <div class="pillar-media">
-          <div class="phone-sm"><img src="assets/screens/home.png" alt="Flynker multi-brand catalogue"></div>
+          <div class="phone-sm"><img src="assets/screens/home.png" alt="Multi-brand marketplace" loading="lazy"></div>
         </div>
         <div class="pillar-copy">
-          <span class="pillar-tag">06 · Foundation</span>
-          <h3>A real multi-brand marketplace</h3>
-          <p>Underneath the AI and the community sits a full commerce engine — multi-brand catalogue, cart, wishlist, referrals — so every personalized moment ends in a real, completed purchase.</p>
+          <span class="pillar-tag">06 · Marketplace</span>
+          <h3>Multi-brand catalogue with COD and fulfilment</h3>
+          <p>Independent and D2C labels across apparel, ethnic wear, footwear, bags and beauty, with the cash-on-delivery and fulfilment Indian shoppers expect. Flynker adds the personal layer; brands keep their identity.</p>
+          <ul class="pillar-points"><li>Brands list once and reach every creator</li><li>Built for India's COD-first buyers</li></ul>
         </div>
       </article>
 
@@ -185,165 +297,253 @@
   </div>
 </section>
 
-<!-- ===== WHY NOW ===== -->
-<section class="section why-now" id="why-now">
+<!-- ===== ECOSYSTEM ===== -->
+<section class="section ecosystem" id="ecosystem">
   <div class="container">
-    <p class="eyebrow center light" data-reveal>Why Now</p>
-    <h2 class="display-lg center light" data-reveal>GenZ didn't stop shopping.<br>They stopped trusting <em>catalogues.</em></h2>
+    <p class="eyebrow center light" data-reveal>The Platform</p>
+    <h2 class="display-lg center light" data-reveal>Four connected apps.<br>One <em>real-time</em> fashion engine.</h2>
+    <p class="section-lede center light" data-reveal>Not a deck and not a prototype. Shoppers, creators, designers, brands and admins each have their own app, all on one shared backend.</p>
 
-    <div class="why-grid">
-      <div class="why-card" data-reveal>
-        <span class="why-icon">🎯</span>
-        <p>GenZ discovers fashion through creators and community — not category pages and dropdown filters.</p>
+    <div class="eco-grid">
+      <div class="eco-card" data-reveal>
+        <span class="eco-icon">🛍️</span>
+        <span class="eco-who">For shoppers</span>
+        <h3>Flynker app</h3>
+        <p>Aria AI stylist, skin-tone AI, virtual try-on, Outfit Studio, Style Capsules, Flynks, Creator Corner and designer ateliers.</p>
       </div>
-      <div class="why-card" data-reveal>
-        <span class="why-icon">🧬</span>
-        <p>Personalization is an expectation now, not a feature. A generation raised on algorithmic feeds expects an algorithmic wardrobe.</p>
+      <div class="eco-card" data-reveal>
+        <span class="eco-icon">🎨</span>
+        <span class="eco-who">For creators + designers</span>
+        <h3>Creator &amp; Designer app</h3>
+        <p>Post Flynks and capsules, take custom orders, chat or video-call clients, run brand collaborations and track commissions.</p>
       </div>
-      <div class="why-card" data-reveal>
-        <span class="why-icon">♻️</span>
-        <p>Fast-fashion fatigue is real. Shoppers want fewer, better, more personal pieces — and the option to go fully bespoke.</p>
+      <div class="eco-card" data-reveal>
+        <span class="eco-icon">🏷️</span>
+        <span class="eco-who">For brands</span>
+        <h3>Brand app</h3>
+        <p>Onboard, list products, manage stock, move orders from placed to delivered, and run sponsored and featured campaigns.</p>
       </div>
-      <div class="why-card" data-reveal>
-        <span class="why-icon">🚀</span>
-        <p>The next fashion winner won't out-catalogue Amazon or Myntra. It will out-<em>personalize</em> them.</p>
+      <div class="eco-card" data-reveal>
+        <span class="eco-icon">🛡️</span>
+        <span class="eco-who">For the platform</span>
+        <h3>Admin app</h3>
+        <p>Approve brands and creators, moderate listings, posts and capsules, and watch platform GMV to keep the marketplace trusted.</p>
       </div>
     </div>
 
-    <p class="why-close" data-reveal>Global apparel e-commerce is a multi-trillion-dollar market still run on 2010-era browsing — the opening for a personalization-first, creator-led challenger has never been wider.</p>
+    <div class="sync-demo" data-reveal>
+      <p class="sync-title">One order, every app, within seconds</p>
+      <div class="sync-flow">
+        <div class="sync-step"><span class="sync-dot">1</span><strong>Shopper</strong><span>buys a creator's capsule</span></div>
+        <div class="sync-line"></div>
+        <div class="sync-step"><span class="sync-dot">2</span><strong>Brand</strong><span>sees the order, marks it shipped</span></div>
+        <div class="sync-line"></div>
+        <div class="sync-step"><span class="sync-dot">3</span><strong>Shopper + creator</strong><span>see the status change live</span></div>
+        <div class="sync-line"></div>
+        <div class="sync-step"><span class="sync-dot">4</span><strong>Delivered</strong><span>commission is credited automatically</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ===== COMPETITIVE LANDSCAPE ===== -->
-<section class="section market" id="market">
+<!-- ===== CREATORS & DESIGNERS ===== -->
+<section class="section creators" id="creators">
   <div class="container">
-    <p class="eyebrow center" data-reveal>Competitive Landscape</p>
-    <h2 class="display-lg center" data-reveal>Everyone else picked a lane.<br>We built <em>all of them.</em></h2>
-    <p class="section-lede center" data-reveal>Traditional marketplaces sell products. Social platforms sell inspiration. Flynker is the only place that does both — and completes the purchase.</p>
+    <p class="eyebrow center" data-reveal>Empowering Creators &amp; Designers</p>
+    <h2 class="display-lg center" data-reveal>A storefront and a sales force<br>for <em>every fashion creator.</em></h2>
+    <p class="section-lede center" data-reveal>Today, creators drive fashion sales on Instagram and earn little from them. Independent designers make beautiful work that nobody discovers. Flynker gives both a business.</p>
 
+    <div class="empower-grid">
+      <div class="empower-card" data-reveal>
+        <h3>For fashion creators</h3>
+        <ul>
+          <li><strong>Earn on every sale you drive.</strong> Capsule and product sales are attributed to you automatically.</li>
+          <li><strong>Paid on delivery, guaranteed by the system.</strong> A database trigger credits your commission the moment the order is delivered. No app can skip it or fake it.</li>
+          <li><strong>Turn followers into a community.</strong> Channels, Flynks and capsule drops bring shoppers back.</li>
+          <li><strong>Brand deals inside the app.</strong> Apply, accept and get paid for collaborations without leaving Flynker.</li>
+        </ul>
+      </div>
+      <div class="empower-card" data-reveal>
+        <h3>For fashion designers</h3>
+        <ul>
+          <li><strong>Sell made-to-order, not just ready-made.</strong> Customisation requests, quotes and consults in one inbox.</li>
+          <li><strong>Meet clients face to face.</strong> Chat, voice and video calls settle fit and fabric before production.</li>
+          <li><strong>Reach shoppers through creators.</strong> Designers come for creators, creators come for designers and earnings.</li>
+          <li><strong>Run the business.</strong> Products, orders, analytics and earnings in one dashboard.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="loop" data-reveal>
+      <div class="loop-step"><span>01</span><strong>Brand lists</strong><p>Designers and brands upload collections once.</p></div>
+      <div class="loop-step"><span>02</span><strong>Creator styles</strong><p>Capsules, Flynks and channel drops.</p></div>
+      <div class="loop-step"><span>03</span><strong>Shopper buys the look</strong><p>One tap, whole outfit, bigger basket.</p></div>
+      <div class="loop-step"><span>04</span><strong>Delivered → paid</strong><p>Commission is credited, and the creator posts again.</p></div>
+    </div>
+    <p class="loop-note" data-reveal>Brands <strong>pay for sales, not reach.</strong> No upfront ad spend, and one shared audience instead of every brand buying each customer alone.</p>
+  </div>
+</section>
+
+<!-- ===== MOAT ===== -->
+<section class="section why-now" id="moat">
+  <div class="container">
+    <p class="eyebrow center light" data-reveal>Why we win</p>
+    <h2 class="display-lg center light" data-reveal>A moat that <em>compounds</em> with every order.</h2>
+    <div class="why-grid">
+      <div class="why-card" data-reveal><span class="why-icon">🧠</span><h3 class="why-h">Confidence Engine data flywheel</h3><p>Every selfie, try-on, purchase and return teaches the Confidence Engine what suits each skin tone and body type. A catalogue can't copy this.</p></div>
+      <div class="why-card" data-reveal><span class="why-icon">🔒</span><h3 class="why-h">Incentives in the database</h3><p>Commissions are created by a database trigger only on delivery, so the rules can't be gamed from any app.</p></div>
+      <div class="why-card" data-reveal><span class="why-icon">🤝</span><h3 class="why-h">Creator Corner network effect</h3><p>Designers come for creators, creators come for designers and earnings, and shoppers come for both.</p></div>
+      <div class="why-card" data-reveal><span class="why-icon">⚡</span><h3 class="why-h">Built lean, built fast</h3><p>Two founders shipped four apps, a real-time backend and a live store before raising a rupee.</p></div>
+    </div>
+    <p class="why-close" data-reveal>Why now: multimodal AI can read a selfie for a fraction of a rupee, discovery has moved to creators and short video, D2C labels are drowning in ad costs, and India's next wave of shoppers buys on COD.</p>
+  </div>
+</section>
+
+<!-- ===== COMPETITION ===== -->
+<section class="section competition" id="competition">
+  <div class="container">
+    <p class="eyebrow center" data-reveal>Competition</p>
+    <h2 class="display-lg center" data-reveal>Others picked a lane. <em>Flynker connects all of them.</em></h2>
     <div class="table-wrap" data-reveal>
       <table class="compare-table">
         <thead>
           <tr>
             <th>Capability</th>
-            <th>Traditional marketplaces<br><span>Myntra · Amazon Fashion · ASOS</span></th>
-            <th>Social shopping<br><span>Instagram · Pinterest</span></th>
+            <th>Marketplaces<span>Myntra · Amazon Fashion · Meesho</span></th>
+            <th>Social<span>Instagram · Pinterest</span></th>
             <th class="highlight">Flynker</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>AI personal stylist</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
-          <tr><td>Skin-tone &amp; visual AI recs</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
-          <tr><td>Shoppable creator style capsules</td><td class="no">—</td><td class="partial">Partial</td><td class="yes">✓</td></tr>
-          <tr><td>One-tap complete outfit checkout</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
-          <tr><td>Direct bespoke commissioning</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
-          <tr><td>Community channels &amp; creator chat</td><td class="no">—</td><td class="partial">Partial</td><td class="yes">✓</td></tr>
-          <tr><td>Multi-brand catalogue &amp; fulfillment</td><td class="yes">✓</td><td class="no">—</td><td class="yes">✓</td></tr>
+          <tr><td>AI personal stylist</td><td class="no">—</td><td class="no">—</td><td class="yes">Yes</td></tr>
+          <tr><td>Skin-tone &amp; visual AI recommendations</td><td class="no">—</td><td class="no">—</td><td class="yes">Yes</td></tr>
+          <tr><td>Shoppable creator Style Capsules</td><td class="no">—</td><td class="partial">Partial</td><td class="yes">Yes</td></tr>
+          <tr><td>One-tap complete-outfit checkout</td><td class="no">—</td><td class="no">—</td><td class="yes">Yes</td></tr>
+          <tr><td>Direct bespoke commissioning</td><td class="no">—</td><td class="no">—</td><td class="yes">Yes</td></tr>
+          <tr><td>Pre-purchase fit &amp; colour confidence (cuts RTO)</td><td class="no">—</td><td class="no">—</td><td class="yes">Yes</td></tr>
+          <tr><td>In-app creator sales force paid on delivery (cuts CAC)</td><td class="no">—</td><td class="no">—</td><td class="yes">Yes</td></tr>
+          <tr><td>Community channels &amp; creator chat</td><td class="no">—</td><td class="partial">Partial</td><td class="yes">Yes</td></tr>
+          <tr><td>Multi-brand catalogue, COD &amp; fulfilment</td><td class="yes">Yes</td><td class="no">—</td><td class="yes">Yes</td></tr>
         </tbody>
       </table>
     </div>
   </div>
 </section>
 
-<!-- ===== PROOF / ROADMAP ===== -->
-<section class="section roadmap" id="roadmap">
+<!-- ===== MARKET / GTM ===== -->
+<section class="section gtm" id="market">
   <div class="container">
-    <p class="eyebrow center" data-reveal>Product, Proven</p>
-    <h2 class="display-lg center" data-reveal>Not a deck. A <em>working</em> app.</h2>
-    <p class="section-lede center" data-reveal>Every screen in this page is a real screenshot from a functioning build — not a mockup.</p>
-
-    <div class="roadmap-track" data-reveal>
-      <div class="roadmap-step done">
-        <div class="rm-dot"></div>
-        <h4>Customer App</h4>
-        <p>AI stylist, visual &amp; skin-tone AI, outfit studio, creator channels, style capsules, designer ateliers, full commerce</p>
-        <span class="rm-status status-done">Live</span>
+    <p class="eyebrow center" data-reveal>Go-to-market</p>
+    <h2 class="display-lg center" data-reveal>Win India first.<br>Then take Indian design <em>to the world.</em></h2>
+    <p class="section-lede center" data-reveal>We start where the economics are hardest and the craft is richest: Indian ethnic and occasion wear on COD. A model that works there can work anywhere.</p>
+    <div class="gtm-track">
+      <div class="gtm-step" data-reveal>
+        <span class="gtm-phase">Phase 1 · Now</span>
+        <h3>Telangana &amp; Andhra</h3>
+        <p>Onboard designers and weavers from handloom clusters like Pochampally, Gadwal and Narayanpet. Recruit micro-creators. Ride the wedding and festive seasons.</p>
       </div>
-      <div class="roadmap-step">
-        <div class="rm-dot"></div>
-        <h4>Creator App</h4>
-        <p>Native tools for creators to post updates, launch style capsules and grow paid channel communities</p>
-        <span class="rm-status status-next">In development</span>
+      <div class="gtm-step" data-reveal>
+        <span class="gtm-phase">Phase 2 · Year 1–2</span>
+        <h3>India, Tier 1–3</h3>
+        <p>Creator-led expansion city by city. Organic SEO, Pinterest and Google Shopping keep paid CAC low.</p>
       </div>
-      <div class="roadmap-step">
-        <div class="rm-dot"></div>
-        <h4>Designer / Brand Dashboard</h4>
-        <p>Web dashboard for brands and designers to upload catalogues, manage bespoke commissions and post content</p>
-        <span class="rm-status status-next">In development</span>
-      </div>
-      <div class="roadmap-step">
-        <div class="rm-dot"></div>
-        <h4>Admin Dashboard</h4>
-        <p>Full operational control plane — catalogue moderation, commerce ops, analytics, platform trust &amp; safety</p>
-        <span class="rm-status status-next">In development</span>
+      <div class="gtm-step" data-reveal>
+        <span class="gtm-phase">Phase 3 · Year 2–3</span>
+        <h3>Global</h3>
+        <p>Indian ethnic and occasion wear for buyers in the UAE, UK, US and beyond, then designers and creators worldwide on the same platform.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== BUSINESS MODEL ===== -->
-<section class="section model">
+<section class="section model" id="model">
   <div class="container">
     <p class="eyebrow center" data-reveal>Business Model</p>
-    <h2 class="display-lg center" data-reveal>Six revenue streams, <em>one platform.</em></h2>
-    <p class="section-lede center" data-reveal>Flynker pairs immediate transaction revenue with long-term, high-margin recurring revenue — spanning marketplace, creator commerce, and B2B SaaS.</p>
-
+    <h2 class="display-lg center" data-reveal>Six revenue streams,<br>starting with <em>commission on day one.</em></h2>
     <div class="revenue-grid">
-      <div class="revenue-card" data-reveal>
-        <span class="rc-num">01</span>
-        <h3>Transaction Commission</h3>
-        <p>Primary revenue. A % of GMV charged to the brand, creator, or designer on every marketplace, Style Capsule, or bespoke order.</p>
-      </div>
-      <div class="revenue-card" data-reveal>
-        <span class="rc-num">02</span>
-        <h3>Sponsored Listings</h3>
-        <p>Brands pay for featured placement in the feed, category pages, and Aria's AI recommendation priority.</p>
-      </div>
-      <div class="revenue-card" data-reveal>
-        <span class="rc-num">03</span>
-        <h3>Creator Commerce Fees</h3>
-        <p>Platform fee on brand–creator collaboration deals negotiated through Flynker's channels — separate from the product commission.</p>
-      </div>
-      <div class="revenue-card" data-reveal>
-        <span class="rc-num">04</span>
-        <h3>Flynker Pro <small>(Subscription)</small></h3>
-        <p>User subscription: unlimited Aria AI Stylist sessions, ad-free browsing, early access to drops, and free express delivery.</p>
-      </div>
-      <div class="revenue-card" data-reveal>
-        <span class="rc-num">05</span>
-        <h3>Designer Pro <small>(B2B SaaS)</small></h3>
-        <p>Brand/designer subscription for advanced analytics, trend prediction, demand forecasting, and priority catalogue placement.</p>
-      </div>
-      <div class="revenue-card" data-reveal>
-        <span class="rc-num">06</span>
-        <h3>Native Advertising</h3>
-        <p>In-feed, AI-targeted ads on a CPM/CPC model — similar to Instagram ads, but fashion-vertical focused.</p>
-      </div>
+      <div class="revenue-card" data-reveal><span class="rc-num">01</span><h3>Transaction commission <small>Now</small></h3><p>A take rate on every marketplace, capsule and bespoke order.</p></div>
+      <div class="revenue-card" data-reveal><span class="rc-num">02</span><h3>Sponsored listings <small>Year 1</small></h3><p>Featured placement in the feed, in categories and in Aria's picks.</p></div>
+      <div class="revenue-card" data-reveal><span class="rc-num">03</span><h3>Creator collaboration fees <small>Year 1</small></h3><p>A platform fee on brand–creator deals made in the app.</p></div>
+      <div class="revenue-card" data-reveal><span class="rc-num">04</span><h3>Flynker Pro <small>Year 2</small></h3><p>Shopper subscription: unlimited Aria, early drops, express delivery.</p></div>
+      <div class="revenue-card" data-reveal><span class="rc-num">05</span><h3>Designer Pro (SaaS) <small>Year 2</small></h3><p>Analytics, demand forecasting and priority placement for designers.</p></div>
+      <div class="revenue-card" data-reveal><span class="rc-num">06</span><h3>Native ads <small>Year 3</small></h3><p>AI-targeted in-feed ads, CPM / CPC.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ===== CLOSING / CTA ===== -->
-<section class="section closing" id="contact">
-  <div class="closing-glow"></div>
-  <div class="container closing-inner">
-    <p class="eyebrow center light" data-reveal>The Vision</p>
-    <h2 class="display-xl center light" data-reveal>The future of fashion isn't a catalogue.<br>It's a <em>conversation.</em></h2>
-    <p class="section-lede center light" data-reveal>We're building the platform that finally treats every shopper like an individual — and every creator and designer like a business. Join us.</p>
-    <div class="closing-cta" data-reveal>
-      <a href="mailto:info@flynker.com" class="btn btn-primary btn-lg">Partner With Us</a>
+<!-- ===== TRACTION / ROADMAP ===== -->
+<section class="section roadmap" id="roadmap">
+  <div class="container">
+    <p class="eyebrow center" data-reveal>Traction &amp; Roadmap</p>
+    <h2 class="display-lg center" data-reveal>Built and live, <em>before raising a rupee.</em></h2>
+
+    <div class="shipped-grid">
+      <div class="shipped-card" data-reveal><span class="rm-status status-done">Live</span><h4>Store at flynker.com</h4><p>400+ products, COD, free shipping, SEO, Google Shopping and Meta catalogue running.</p></div>
+      <div class="shipped-card" data-reveal><span class="rm-status status-done">Built</span><h4>Four apps</h4><p>Shopper, Creator &amp; Designer, Brand and Admin, all on one real-time backend.</p></div>
+      <div class="shipped-card" data-reveal><span class="rm-status status-done">Built</span><h4>AI in the product</h4><p>Aria stylist, grounded skin-tone analysis, virtual try-on, Outfit Studio and Complete Look generation.</p></div>
+      <div class="shipped-card" data-reveal><span class="rm-status status-done">Built</span><h4>Order &amp; commission engine</h4><p>Cross-app order sync, checkout attribution and delivery-gated creator commissions.</p></div>
     </div>
-    <p class="closing-contact" data-reveal>info@flynker.com</p>
+
+    <p class="sub-head" data-reveal>18 months from pre-seed to seed-ready</p>
+    <div class="roadmap-track">
+      <div class="roadmap-step" data-reveal><div class="rm-dot"></div><span class="rm-status status-next">Months 0–3</span><h4>Launch all four apps</h4><p>Play Store launch of the shopper, creator &amp; designer, and brand apps.</p></div>
+      <div class="roadmap-step" data-reveal><div class="rm-dot"></div><span class="rm-status status-next">Months 3–6</span><h4>First cohorts</h4><p>Designer onboarding from the Telangana and Andhra clusters and the first creator cohorts.</p></div>
+      <div class="roadmap-step" data-reveal><div class="rm-dot"></div><span class="rm-status status-next">Months 6–12</span><h4>Prove the loop</h4><p>Measured RTO reduction and repeat purchase through channels.</p></div>
+      <div class="roadmap-step" data-reveal><div class="rm-dot"></div><span class="rm-status status-next">Months 12–18</span><h4>Seed-ready</h4><p>Designer Pro SaaS beta, first global pilot, scaling monthly GMV.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== THE ASK ===== -->
+<section class="section ask" id="ask">
+  <div class="container ask-inner">
+    <div class="ask-copy" data-reveal>
+      <p class="eyebrow light">The Ask</p>
+      <h2 class="ask-amount">₹1.5 Cr</h2>
+      <p class="ask-sub">Pre-seed for 18 months of runway, to launch the apps, onboard designers, brands and creators, and prove that personalised fashion cuts RTO and CAC.</p>
+      <a href="https://calendly.com/tharunkarthikeya98/30min" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a Founder Call</a>
+    </div>
+    <div class="ask-funds" data-reveal>
+      <p class="funds-title">Use of funds</p>
+      <div class="fund-row"><div class="fund-label"><span>Product &amp; AI</span><strong>40%</strong></div><div class="fund-bar"><i style="width:40%"></i></div></div>
+      <div class="fund-row"><div class="fund-label"><span>Designer &amp; creator acquisition</span><strong>30%</strong></div><div class="fund-bar"><i style="width:30%"></i></div></div>
+      <div class="fund-row"><div class="fund-label"><span>Team</span><strong>20%</strong></div><div class="fund-bar"><i style="width:20%"></i></div></div>
+      <div class="fund-row"><div class="fund-label"><span>Ops, legal &amp; buffer</span><strong>10%</strong></div><div class="fund-bar"><i style="width:10%"></i></div></div>
+      <p class="funds-note">Hiring next: ML engineer, creator partnerships lead.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEAM ===== -->
+<section class="section team" id="team">
+  <div class="container">
+    <p class="eyebrow center" data-reveal>Team</p>
+    <h2 class="display-lg center" data-reveal>Builders from Warangal,<br>building for <em>designers everywhere.</em></h2>
+    <div class="team-grid">
+      <div class="team-card" data-reveal><span class="team-avatar">TB</span><h3>Tharun Bandla</h3><p class="team-role">Founder &amp; CEO</p><p>Product vision. Built Flynker's apps and the live store.</p></div>
+      <div class="team-card" data-reveal><span class="team-avatar">VR</span><h3>Vinay Racharla</h3><p class="team-role">Co-founder</p><p>Building Flynker from day one.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLOSING ===== -->
+<section class="closing" id="contact">
+  <div class="closing-glow"></div>
+  <div class="container closing-inner" data-reveal>
+    <h2 class="display-xl center light">The future of fashion isn't a catalogue.<br><em>It's a conversation.</em></h2>
+    <p class="section-lede center light">Join us in building the platform where every shopper gets a stylist, and every creator and designer gets a business.</p>
+    <div class="closing-cta">
+      <a href="https://calendly.com/tharunkarthikeya98/30min" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a Founder Call</a>
+    </div>
+    <p class="closing-contact">contact@flynker.com · +91 83339 76311 · <a href="https://flynker.com" target="_blank" rel="noopener">flynker.com</a></p>
   </div>
 </section>
 
 <footer class="footer">
   <div class="container footer-inner">
-    <a href="#top" class="brand">
-      <img src="assets/flynker_icon.png" alt="Flynker" class="brand-mark">
-      <span>Flynker</span>
-    </a>
-    <p>© <span id="year"></span> Flynker. Fashion, finally personal.</p>
+    <a href="#top" class="brand"><img src="assets/flynker_icon.png" alt="Flynker" class="brand-mark"><span>Flynker</span></a>
+    <p>© <span id="year"></span> Flynker. Forward-looking plans and timelines are targets, not results.</p>
   </div>
 </footer>
 

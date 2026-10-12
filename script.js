@@ -15,3 +15,9 @@ const io = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 revealEls.forEach(el => io.observe(el));
+
+const navToggle = document.getElementById('navToggle');
+if (navToggle) {
+  navToggle.addEventListener('click', () => nav.classList.toggle('open'));
+  document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+}
