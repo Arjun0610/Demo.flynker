@@ -128,3 +128,4 @@
   .tr-bar b { opacity: 1; transition: none; }
   .tldr-item { transition: none; }
 }
+.team-photo { width: 96px; height: 96px; object-fit: cover; padding: 3px; background: linear-gradient(135deg, var(--pink), var(--pink-deep)); }
