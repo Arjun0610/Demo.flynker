@@ -47,9 +47,20 @@ if (fj) {
     }, 250);
     schedule();
   };
+  const personaBtns = [...fj.querySelectorAll('.fj-persona button')];
+  const setPersona = (p) => {
+    fj.dataset.p = p;
+    personaBtns.forEach(b => b.classList.toggle('is-on', b.dataset.p === p));
+  };
+  personaBtns.forEach(b => b.addEventListener('click', () => { setPersona(b.dataset.p); show(0); }));
+  // After the last step, switch shopper (womenswear <-> menswear) and start again.
+  const next = () => {
+    if (cur === steps.length - 1) setPersona(fj.dataset.p === 'w' ? 'm' : 'w');
+    show((cur + 1) % steps.length);
+  };
   const schedule = () => {
     clearTimeout(timer);
-    if (visible && !reduceMotion) timer = setTimeout(() => show((cur + 1) % steps.length), DUR);
+    if (visible && !reduceMotion) timer = setTimeout(next, DUR);
   };
   fj.style.setProperty('--fj-dur', DUR + 'ms');
   if (reduceMotion) fj.classList.add('paused');

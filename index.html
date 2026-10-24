@@ -221,11 +221,11 @@
 <section class="section flywheel" id="flywheel">
   <div class="container">
     <p class="eyebrow center light" data-reveal>The customer journey</p>
-    <h2 class="display-lg center light" data-reveal>One shopper, one look,<br>and a wheel that <em>spins faster</em> every order.</h2>
-    <p class="section-lede center light" data-reveal>Follow one shopper through Flynker. Watch where the Creator Corner removes the ad bill, where the Confidence Engine removes the return, and why she comes back without being bought again.</p>
+    <h2 class="display-lg center light" data-reveal>Two shoppers, one app,<br>and a wheel that <em>spins faster</em> every order.</h2>
+    <p class="section-lede center light" data-reveal>Flynker launches with womenswear and menswear together. Follow a shopper through it. Watch where the Creator Corner removes the ad bill, where the Confidence Engine removes the return, and why shoppers come back without being bought again.</p>
 
     <!-- Part 1: the journey -->
-    <div class="fj" id="fj" data-reveal>
+    <div class="fj" id="fj" data-p="w" data-reveal>
       <div class="fj-stage">
         <div class="fj-phone">
           <img src="assets/screens/flynks_feed.jpg" alt="" class="fj-screen is-on" data-step="0">
@@ -239,21 +239,26 @@
         <div class="fj-chip fj-chip-b" id="fjChipB">Creator Corner</div>
       </div>
 
+      <div class="fj-side">
+        <div class="fj-persona" role="group" aria-label="Choose a shopper">
+          <button type="button" class="is-on" data-p="w">Priya · womenswear</button>
+          <button type="button" data-p="m">Rahul · menswear</button>
+        </div>
       <ol class="fj-steps" id="fjSteps">
         <li class="is-on" data-chip="Found via a creator · ₹0 ads" data-engine="Creator Corner">
-          <button type="button"><span class="fj-n">01</span><span class="fj-t"><strong>She discovers a look, not an ad</strong><span>Priya scrolls Flynks and sees a creator she follows styling a kurta set. Nobody paid for that impression.</span></span></button>
+          <button type="button"><span class="fj-n">01</span><span class="fj-t"><strong><span class="p-w">She discovers a look, not an ad</span><span class="p-m">He discovers a look, not an ad</span></strong><span><span class="p-w">Priya scrolls Flynks and sees a creator she follows styling a kurta set. Nobody paid for that impression.</span><span class="p-m">Rahul watches a creator's Flynk styling a linen shirt with chinos for a weekend trip. No ad brought him there.</span></span></span></button>
           <i class="fj-bar"></i>
         </li>
         <li data-chip="Skin tone + body type read" data-engine="Confidence Engine">
-          <button type="button"><span class="fj-n">02</span><span class="fj-t"><strong>She asks “will it suit me?”</strong><span>One selfie. Aria reads her skin tone against a reference scale, plus body type and style.</span></span></button>
+          <button type="button"><span class="fj-n">02</span><span class="fj-t"><strong><span class="p-w">She asks “will it suit me?”</span><span class="p-m">He asks “will it suit me?”</span></strong><span><span class="p-w">One selfie. Aria reads her skin tone against a reference scale, plus body type and style.</span><span class="p-m">One selfie. Aria reads his skin tone against a reference scale, plus build and style, so “which colour?” finally has an answer.</span></span></span></button>
           <i class="fj-bar"></i>
         </li>
         <li data-chip="Match score before cart" data-engine="Confidence Engine">
-          <button type="button"><span class="fj-n">03</span><span class="fj-t"><strong>She sees it on herself first</strong><span>A match score, virtual try-on and a skin-tone score, before she adds to cart.</span></span></button>
+          <button type="button"><span class="fj-n">03</span><span class="fj-t"><strong><span class="p-w">She sees it on herself first</span><span class="p-m">He sees it on himself first</span></strong><span><span class="p-w">A match score, virtual try-on and a skin-tone score, before she adds to cart.</span><span class="p-m">A match score, virtual try-on and a skin-tone score, before he adds to cart.</span></span></span></button>
           <i class="fj-bar"></i>
         </li>
         <li data-chip="Whole look · sale tagged to creator" data-engine="Creator Corner">
-          <button type="button"><span class="fj-n">04</span><span class="fj-t"><strong>She buys the whole look</strong><span>The creator's Style Capsule in one tap: a bigger basket, attributed to the creator at checkout.</span></span></button>
+          <button type="button"><span class="fj-n">04</span><span class="fj-t"><strong><span class="p-w">She buys the whole look</span><span class="p-m">He buys the whole look</span></strong><span><span class="p-w">The creator's Style Capsule in one tap: a bigger basket, attributed to the creator at checkout.</span><span class="p-m">The creator's weekend capsule, shirt, chinos and sneakers, in one tap: a bigger basket, attributed to the creator at checkout.</span></span></span></button>
           <i class="fj-bar"></i>
         </li>
         <li data-chip="Delivered · kept · creator paid" data-engine="Both engines">
@@ -261,12 +266,13 @@
           <i class="fj-bar"></i>
         </li>
         <li data-chip="Repeat order · no new ad spend" data-engine="The flywheel">
-          <button type="button"><span class="fj-n">06</span><span class="fj-t"><strong>She comes back on her own</strong><span>A drop in the creator's channel brings her back. Her profile now knows her fit, so the next match is even better.</span></span></button>
+          <button type="button"><span class="fj-n">06</span><span class="fj-t"><strong><span class="p-w">She comes back on her own</span><span class="p-m">He comes back on his own</span></strong><span><span class="p-w">A drop in the creator's channel brings her back. Her profile now knows her fit, so the next match is even better.</span><span class="p-m">A new drop in the creator's channel brings him back. His profile now knows his fit, so the next match is even better.</span></span></span></button>
           <i class="fj-bar"></i>
         </li>
       </ol>
+      </div>
     </div>
-    <p class="fj-note" data-reveal>Priya is an illustrative shopper. Screens are from the working Flynker app.</p>
+    <p class="fj-note" data-reveal>Priya and Rahul are illustrative shoppers. The journey switches between them automatically, or tap to choose. Screens are from the working Flynker app.</p>
 
     <!-- Part 2: the flywheel -->
     <div class="fw" data-reveal>
@@ -314,9 +320,9 @@
 
     <!-- Part 3: why shoppers stick -->
     <div class="fw-stick">
-      <div class="fw-stick-card" data-reveal><span>🧬</span><h4>Her style profile lives here</h4><p>Skin tone, fit and taste get sharper with every order. Leaving Flynker means starting from zero somewhere else.</p></div>
-      <div class="fw-stick-card" data-reveal><span>💬</span><h4>Her creators live here</h4><p>She follows people, not stores. Channels and drops bring her back without a retargeting ad.</p></div>
-      <div class="fw-stick-card" data-reveal><span>✅</span><h4>Her orders arrive right</h4><p>Fewer wrong sizes and wrong colours build trust, and trust is what turns a first order into a habit.</p></div>
+      <div class="fw-stick-card" data-reveal><span>🧬</span><h4>Their style profile lives here</h4><p>Skin tone, fit and taste get sharper with every order. Leaving Flynker means starting from zero somewhere else.</p></div>
+      <div class="fw-stick-card" data-reveal><span>💬</span><h4>Their creators live here</h4><p>Shoppers follow people, not stores. Channels and drops bring them back without a retargeting ad.</p></div>
+      <div class="fw-stick-card" data-reveal><span>✅</span><h4>Their orders arrive right</h4><p>Fewer wrong sizes and wrong colours build trust, and trust is what turns a first order into a habit.</p></div>
     </div>
 
     <!-- Part 4: marketing cost over time -->
