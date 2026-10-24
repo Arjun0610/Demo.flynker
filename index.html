@@ -12,9 +12,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261024c">
-<link rel="stylesheet" href="v2.css?v=20261024c">
-<link rel="stylesheet" href="flywheel.css?v=20261024c">
+<link rel="stylesheet" href="styles.css?v=20261024d">
+<link rel="stylesheet" href="v2.css?v=20261024d">
+<link rel="stylesheet" href="flywheel.css?v=20261024d">
+<link rel="stylesheet" href="traction.css?v=20261024d">
 </head>
 <body>
 
@@ -28,6 +29,7 @@
       <span>Flynker</span>
     </a>
     <nav class="nav-links" id="navLinks">
+      <a href="#demo">Demo</a>
       <a href="#shift">Vision</a>
       <a href="#engines">RTO &amp; CAC</a>
       <a href="#flywheel">Flywheel</a>
@@ -37,6 +39,7 @@
       <a href="#model">Business</a>
       <a href="#invest">Why Invest</a>
       <a href="#ask">The Ask</a>
+      <a href="#faq">FAQ</a>
     </nav>
     <a href="https://calendly.com/tharunkarthikeya98/30min" target="_blank" rel="noopener" class="btn btn-nav">Book a Founder Call</a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -85,13 +88,42 @@
   <div class="scroll-cue"><span></span></div>
 </section>
 
+<!-- ===== FLYNKER IN 30 SECONDS ===== -->
+<section class="tldr" aria-label="Flynker in 30 seconds">
+  <div class="container">
+    <p class="tldr-title" data-reveal>Flynker in 30 seconds</p>
+    <div class="tldr-grid" data-reveal>
+      <a class="tldr-item" href="#problem"><b>Problem</b><span>Fashion brands pay twice: ads to win a customer, then shipping again when cash-on-delivery parcels come back.</span></a>
+      <a class="tldr-item" href="#engines"><b>Solution</b><span>AI that checks fit and colour before checkout, and creators who sell the look. Fewer returns, cheaper customers.</span></a>
+      <a class="tldr-item tldr-hot" href="#roadmap"><b>Proof</b><span>Our live store <strong>flynker.com</strong> already takes real cash-on-delivery orders every day: the exact problem we solve.</span></a>
+      <a class="tldr-item" href="#roadmap"><b>Built</b><span>Four apps and a live store with automated operations, before raising a rupee.</span></a>
+      <a class="tldr-item" href="#ask"><b>Ask</b><span><strong>₹1.5 Cr</strong> pre-seed: 18 months to launch the apps, onboard 120+ brands and prove the flywheel.</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- ===== PROOF STRIP ===== -->
 <section class="proof">
   <div class="container proof-grid">
-    <div class="proof-item" data-reveal><strong>400+</strong><span>products live on flynker.com, with COD and Google Shopping</span></div>
+    <div class="proof-item" data-reveal><strong>340+</strong><span>products live on flynker.com, with COD and Google Shopping</span></div>
     <div class="proof-item" data-reveal><strong>4</strong><span>apps built: Shopper, Creator &amp; Designer, Brand, Admin</span></div>
     <div class="proof-item" data-reveal><strong>1</strong><span>real-time backend syncing orders across every app in seconds</span></div>
     <div class="proof-item" data-reveal><strong>0</strong><span>commission paid on undelivered orders, enforced in the database</span></div>
+  </div>
+</section>
+
+<!-- ===== 60-SECOND DEMO ===== -->
+<section class="section demo" id="demo">
+  <div class="container">
+    <p class="eyebrow center" data-reveal>See it in 60 seconds</p>
+    <h2 class="display-lg center" data-reveal>From selfie to <em>the right outfit.</em></h2>
+    <p class="section-lede center" data-reveal>A one-minute walk through the Flynker apps: the AI stylist, skin-tone matching, creator Style Capsules, and how creators get paid only after delivery.</p>
+    <div class="demo-frame" data-reveal>
+      <video id="demoVideo" controls playsinline preload="metadata" poster="assets/demo/flynker-demo-poster.jpg">
+        <source src="assets/demo/flynker-demo.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p class="demo-note" data-reveal>Screens are from our working apps. Brands and creators in the demo are sample data, not signed partners.</p>
   </div>
 </section>
 
@@ -639,7 +671,7 @@
     <h2 class="display-lg center" data-reveal>Built and live, <em>before raising a rupee.</em></h2>
 
     <div class="shipped-grid">
-      <div class="shipped-card" data-reveal><span class="rm-status status-done">Live</span><h4>Store at flynker.com</h4><p>400+ products, COD, free shipping, SEO, Google Shopping and Meta catalogue running.</p></div>
+      <div class="shipped-card" data-reveal><span class="rm-status status-done">Live</span><h4>Store at flynker.com</h4><p>340+ products, COD, free shipping, SEO, Google Shopping and Meta catalogue running.</p></div>
       <div class="shipped-card" data-reveal><span class="rm-status status-done">Built</span><h4>Four apps</h4><p>Shopper, Creator &amp; Designer, Brand and Admin, all on one real-time backend.</p></div>
       <div class="shipped-card" data-reveal><span class="rm-status status-done">Built</span><h4>AI in the product</h4><p>Aria stylist, grounded skin-tone analysis, virtual try-on, Outfit Studio and Complete Look generation.</p></div>
       <div class="shipped-card" data-reveal><span class="rm-status status-done">Built</span><h4>Order &amp; commission engine</h4><p>Cross-app order sync, checkout attribution and delivery-gated creator commissions.</p></div>
@@ -759,11 +791,82 @@
 <section class="section team" id="team">
   <div class="container">
     <p class="eyebrow center" data-reveal>Team</p>
-    <h2 class="display-lg center" data-reveal>Builders from Warangal,<br>building for <em>designers everywhere.</em></h2>
-    <div class="team-grid">
-      <div class="team-card" data-reveal><span class="team-avatar">TB</span><h3>Tharun Bandla</h3><p class="team-role">Founder &amp; CEO</p><p>Product vision. Built Flynker's apps and the live store.</p></div>
-      <div class="team-card" data-reveal><span class="team-avatar">VR</span><h3>Vinay Racharla</h3><p class="team-role">Co-founder</p><p>Building Flynker from day one.</p></div>
+    <h2 class="display-lg center" data-reveal>Builders from Telangana,<br>building for <em>designers everywhere.</em></h2>
+    <div class="team-grid team-grid-3">
+      <div class="team-card" data-reveal><span class="team-avatar">TB</span><h3>Tharun Bandla</h3><p class="team-role">Founder &amp; CEO</p><p class="team-prev">Ex-Genpact</p><p class="team-bio">Built Flynker's entire tech stack from scratch: four apps, the real-time backend and the AI features. Grew a 7,000+ shopper waitlist and ran the Creator Corner pilot.</p><a class="team-in" href="https://www.linkedin.com/in/-tharun-kumar-/" target="_blank" rel="noopener">LinkedIn</a></div>
+      <div class="team-card" data-reveal><span class="team-avatar">VR</span><h3>Vinay Kumar Racharla</h3><p class="team-role">Co-founder &amp; MD</p><p class="team-prev">Ex-Capgemini</p><p class="team-bio">Co-founder. Leads company operations and owns brand and vendor onboarding for the Phase 1 rollout.</p><a class="team-in" href="https://www.linkedin.com/in/vinay-kumar-racharla-a3a073378/" target="_blank" rel="noopener">LinkedIn</a></div>
+      <div class="team-card" data-reveal><span class="team-avatar">SP</span><h3>Sasi Preetham</h3><p class="team-role">AI Advisor · Incoming Head of Tech</p><p class="team-prev">Applied Research Engineer, Zoho</p><p class="team-bio">Advising on and building Flynker's AI infrastructure; joins as Head of Tech. Four years shipping multi-modal LLMs across speech, code and language at Zoho.</p><a class="team-in" href="https://www.linkedin.com/in/sasipreetham/" target="_blank" rel="noopener">LinkedIn</a></div>
     </div>
+
+    <div class="pow" data-reveal>
+      <div class="pow-head">
+        <span class="fw-kicker">Why this team</span>
+        <h3>Operators, not just planners.</h3>
+        <p>We run the store the apps are built for. Every feature is tested against real cash-on-delivery orders, real vendors and real ad budgets, not slides. Here is what the team shipped before raising a rupee.</p>
+      </div>
+      <ol class="pow-list">
+        <li><b>Live store</b><span>flynker.com: 340+ ethnic and occasion-wear products, COD and free shipping, run every day.</span></li>
+        <li><b>7,000+ waitlist</b><span>Shoppers have signed up for the app before launch, and the list is still growing.</span></li>
+        <li><b>Creator Corner pilot</b><span>Tested creators selling curated looks to their own audiences: the model the app is built on.</span></li>
+        <li><b>Growth in-house</b><span>SEO, Google Shopping, Meta catalogue and ad campaigns, set up and run by us.</span></li>
+        <li><b>Four apps</b><span>Shopper, Creator &amp; Designer, Brand and Admin, built for Android.</span></li>
+        <li><b>Real-time backend</b><span>Orders sync across every app; creator commissions are created only on delivery, enforced in the database.</span></li>
+        <li><b>AI in the product</b><span>Aria stylist, skin-tone analysis, virtual try-on and Complete Look generation.</span></li>
+        <li><b>Store autopilot</b><span>Automated product uploads, weekly clean-up of slow stock, a vendor stock dashboard and daily ad reports.</span></li>
+      </ol>
+      <p class="pow-hire">Hiring next with this round: an ML engineer and a creator partnerships lead.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INVESTOR FAQ ===== -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <p class="eyebrow center" data-reveal>Investor FAQ</p>
+    <h2 class="display-lg center" data-reveal>The questions <em>we get asked most.</em></h2>
+    <div class="faq-list" data-reveal>
+      <details class="faq-item" open>
+        <summary>Why won't Myntra or Meesho just copy this?</summary>
+        <p>They can copy features, not the data. Our Confidence Engine learns from every selfie, try-on, purchase and return which styles and colours actually suit which skin tones and body types. Big marketplaces are built around a catalogue grid and ad-funded discovery; rebuilding around a personal stylist and a creator sales force means changing how they make money today. We start where they are weakest: small designers, ethnic and occasion wear, and COD shoppers.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How exactly do you cut returns (RTO)?</summary>
+        <p>Most fashion returns come down to "it didn't suit me" or "it didn't fit". Before checkout, Flynker reads the shopper's selfie for skin tone and undertone, matches colours against a fixed reference scale, and shows the outfit styled on real creators. A shopper who is confident before paying is far less likely to refuse the parcel at the door. Measuring this reduction is the first milestone of the round.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do you get customers without burning money on ads?</summary>
+        <p>Creators are our sales force. They build shoppable Style Capsules, share them, and earn a commission only after the order is delivered, so we pay for results, not for clicks. On top of that, SEO, Google Shopping and community channels bring repeat shoppers back for free. Paid ads are a top-up, not the engine.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Why would brands and designers join a new marketplace?</summary>
+        <p>Because we fix the two costs that hurt them most: ads to find customers and returns that come back. Brands get a creator sales force and fit-confident shoppers in one place, plus a simple app to manage stock and orders. In Phase 1 we onboard designers and weavers from the Telangana and Andhra handloom clusters, with a target of 120+ brands across women's and men's wear.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How does Flynker make money?</summary>
+        <p>A commission on every order from day one. Then sponsored listings and creator collaboration fees in year 1, shopper and designer subscriptions in year 2, and native ads in year 3. Brands hold the stock, so the model is asset-light.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is the product real, or a mock-up?</summary>
+        <p>Real. The four apps run on a live backend: place an order in the shopper app and it appears in the brand and creator apps within seconds, and commissions are credited only when the order is marked delivered. The AI stylist and skin-tone analysis run on Google's Gemini models. For demos we use sample brands and creators; they are test data, not signed partners. Our own store, flynker.com, is fully live.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Isn't the AI expensive to run?</summary>
+        <p>No. Reading a selfie or styling a look with today's multimodal models costs a fraction of a rupee per request, small next to the cost of one returned parcel. As volume grows we can cache results and move frequent tasks to smaller models.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Why start with Indian ethnic wear and COD?</summary>
+        <p>It has the hardest economics and the richest craft. COD return rates are high, which makes the pain obvious and our impact measurable. If personalisation works there, it works anywhere. Indian ethnic and occasion wear also has buyers worldwide, which is our path to global after India.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What will ₹1.5 Cr achieve?</summary>
+        <p>18 months of runway to launch all four apps, onboard 120+ brands and the first creator cohorts, and prove with data that the flywheel lowers returns and marketing cost. Split: 40% product and AI, 30% designer and creator acquisition, 20% team, 10% operations, legal and buffer. Those milestones make Flynker seed-ready.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What are the biggest risks, and how do you handle them?</summary>
+        <p>Three: creators not joining, brands not listing, and the RTO reduction being smaller than we expect. We handle them by paying creators only on delivery (no cash burned on creators who don't sell), starting with handloom clusters we can reach in person, and testing every change on our own live store before scaling it. We share real numbers in monthly investor updates, good or bad.</p>
+      </details>
+    </div>
+    <p class="faq-more" data-reveal>Another question? <a href="https://calendly.com/tharunkarthikeya98/30min" target="_blank" rel="noopener">Ask us on a founder call</a>.</p>
   </div>
 </section>
 
@@ -787,6 +890,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=20261024c"></script>
+<script src="script.js?v=20261024d"></script>
 </body>
 </html>
