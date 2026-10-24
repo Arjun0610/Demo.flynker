@@ -14,6 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="v2.css">
+<link rel="stylesheet" href="flywheel.css">
 </head>
 <body>
 
@@ -29,6 +30,7 @@
     <nav class="nav-links" id="navLinks">
       <a href="#shift">Vision</a>
       <a href="#engines">RTO &amp; CAC</a>
+      <a href="#flywheel">Flywheel</a>
       <a href="#product">Product</a>
       <a href="#ecosystem">Platform</a>
       <a href="#creators">Creators</a>
@@ -209,7 +211,156 @@
     </div>
 
     <div class="engine-together" data-reveal>
-      <p><strong>Together they reinforce each other.</strong> The Creator Corner brings shoppers in cheaply; the Confidence Engine makes sure what they buy stays bought. Every delivered order and every return teaches Aria more about what suits whom, so both engines get better as Flynker grows.</p>
+      <p><strong>Together they reinforce each other.</strong> The Creator Corner brings shoppers in cheaply; the Confidence Engine makes sure what they buy stays bought. Every delivered order and every return teaches Aria more about what suits whom, so both engines get better as Flynker grows. <a href="#flywheel" class="fw-jump">See the flywheel ↓</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CUSTOMER JOURNEY + FLYWHEEL ===== -->
+<section class="section flywheel" id="flywheel">
+  <div class="container">
+    <p class="eyebrow center light" data-reveal>The customer journey</p>
+    <h2 class="display-lg center light" data-reveal>One shopper, one look,<br>and a wheel that <em>spins faster</em> every order.</h2>
+    <p class="section-lede center light" data-reveal>Follow one shopper through Flynker. Watch where the Creator Corner removes the ad bill, where the Confidence Engine removes the return, and why she comes back without being bought again.</p>
+
+    <!-- Part 1: the journey -->
+    <div class="fj" id="fj" data-reveal>
+      <div class="fj-stage">
+        <div class="fj-phone">
+          <img src="assets/screens/flynks_feed.jpg" alt="" class="fj-screen is-on" data-step="0">
+          <img src="assets/screens/aria_v2.jpg" alt="" class="fj-screen" data-step="1" loading="lazy">
+          <img src="assets/screens/product_ai_match.jpg" alt="" class="fj-screen" data-step="2" loading="lazy">
+          <img src="assets/screens/style_capsule.png" alt="" class="fj-screen" data-step="3" loading="lazy">
+          <img src="assets/screens/creator_profile.jpg" alt="" class="fj-screen" data-step="4" loading="lazy">
+          <img src="assets/screens/my_channels.png" alt="" class="fj-screen" data-step="5" loading="lazy">
+        </div>
+        <div class="fj-chip fj-chip-a" id="fjChipA">Found via a creator · ₹0 ads</div>
+        <div class="fj-chip fj-chip-b" id="fjChipB">Creator Corner</div>
+      </div>
+
+      <ol class="fj-steps" id="fjSteps">
+        <li class="is-on" data-chip="Found via a creator · ₹0 ads" data-engine="Creator Corner">
+          <button type="button"><span class="fj-n">01</span><span class="fj-t"><strong>She discovers a look, not an ad</strong><span>Priya scrolls Flynks and sees a creator she follows styling a kurta set. Nobody paid for that impression.</span></span></button>
+          <i class="fj-bar"></i>
+        </li>
+        <li data-chip="Skin tone + body type read" data-engine="Confidence Engine">
+          <button type="button"><span class="fj-n">02</span><span class="fj-t"><strong>She asks “will it suit me?”</strong><span>One selfie. Aria reads her skin tone against a reference scale, plus body type and style.</span></span></button>
+          <i class="fj-bar"></i>
+        </li>
+        <li data-chip="Match score before cart" data-engine="Confidence Engine">
+          <button type="button"><span class="fj-n">03</span><span class="fj-t"><strong>She sees it on herself first</strong><span>A match score, virtual try-on and a skin-tone score, before she adds to cart.</span></span></button>
+          <i class="fj-bar"></i>
+        </li>
+        <li data-chip="Whole look · sale tagged to creator" data-engine="Creator Corner">
+          <button type="button"><span class="fj-n">04</span><span class="fj-t"><strong>She buys the whole look</strong><span>The creator's Style Capsule in one tap: a bigger basket, attributed to the creator at checkout.</span></span></button>
+          <i class="fj-bar"></i>
+        </li>
+        <li data-chip="Delivered · kept · creator paid" data-engine="Both engines">
+          <button type="button"><span class="fj-n">05</span><span class="fj-t"><strong>It arrives, fits, and stays</strong><span>No refusal, no return. Only now is the creator's commission credited, so creators only push what stays sold.</span></span></button>
+          <i class="fj-bar"></i>
+        </li>
+        <li data-chip="Repeat order · no new ad spend" data-engine="The flywheel">
+          <button type="button"><span class="fj-n">06</span><span class="fj-t"><strong>She comes back on her own</strong><span>A drop in the creator's channel brings her back. Her profile now knows her fit, so the next match is even better.</span></span></button>
+          <i class="fj-bar"></i>
+        </li>
+      </ol>
+    </div>
+    <p class="fj-note" data-reveal>Priya is an illustrative shopper. Screens are from the working Flynker app.</p>
+
+    <!-- Part 2: the flywheel -->
+    <div class="fw" data-reveal>
+      <div class="fw-copy">
+        <span class="fw-kicker">Why it compounds</span>
+        <h3>Every order makes the next one <em>cheaper to win.</em></h3>
+        <p>On an ad-led store, order #2 costs as much to win as order #1. On Flynker, each turn of the wheel adds something that stays: another creator post, another follower in a channel, another data point on what suits whom.</p>
+        <ul class="fw-legend">
+          <li><i class="fw-key fw-key-out"></i><span><strong>Outer loop, the Creator Corner:</strong> creators bring shoppers for free and are paid only on delivery. This loop drives down <strong>CAC</strong>.</span></li>
+          <li><i class="fw-key fw-key-in"></i><span><strong>Inner loop, the Confidence Engine:</strong> every order and return trains Aria, so matches improve. This loop drives down <strong>RTO</strong>.</span></li>
+        </ul>
+        <div class="fw-meter" aria-hidden="true">
+          <div class="fw-meter-top"><span>Paid marketing per order <small>(illustrative index)</small></span><b id="fwIndex">100</b></div>
+          <div class="fw-meter-track"><i id="fwMeterBar"></i></div>
+          <div class="fw-meter-turn">Turn <b id="fwTurn">1</b> of the wheel</div>
+        </div>
+      </div>
+
+      <div class="fw-wheel" id="fwWheel">
+        <svg class="fw-svg" viewBox="0 0 600 600" aria-hidden="true">
+          <defs>
+            <linearGradient id="fwGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff5fb6"/><stop offset="1" stop-color="#D60685"/>
+            </linearGradient>
+          </defs>
+          <circle cx="300" cy="300" r="230" class="fw-ring"/>
+          <circle cx="300" cy="300" r="230" class="fw-trail" id="fwTrail" transform="rotate(-90 300 300)"/>
+          <circle cx="300" cy="300" r="128" class="fw-ring-in"/>
+          <circle cx="300" cy="300" r="128" class="fw-ring-in-spin" transform="rotate(-90 300 300)"/>
+          <circle cx="300" cy="70" r="11" class="fw-dot" id="fwDot"/>
+        </svg>
+        <div class="fw-center">
+          <img src="assets/flynker_icon.png" alt="">
+          <strong>Data loop</strong>
+          <span>every order &amp; return<br>trains Aria</span>
+        </div>
+        <div class="fw-node" style="--a:0"><b>1</b><span>Creators post looks</span></div>
+        <div class="fw-node" style="--a:1"><b>2</b><span>Shoppers discover, free</span></div>
+        <div class="fw-node" style="--a:2"><b>3</b><span>Confidence Engine matches</span></div>
+        <div class="fw-node" style="--a:3"><b>4</b><span>Orders that stay bought</span></div>
+        <div class="fw-node" style="--a:4"><b>5</b><span>Creators paid on delivery</span></div>
+        <div class="fw-node" style="--a:5"><b>6</b><span>More creators &amp; brands join</span></div>
+      </div>
+    </div>
+
+    <!-- Part 3: why shoppers stick -->
+    <div class="fw-stick">
+      <div class="fw-stick-card" data-reveal><span>🧬</span><h4>Her style profile lives here</h4><p>Skin tone, fit and taste get sharper with every order. Leaving Flynker means starting from zero somewhere else.</p></div>
+      <div class="fw-stick-card" data-reveal><span>💬</span><h4>Her creators live here</h4><p>She follows people, not stores. Channels and drops bring her back without a retargeting ad.</p></div>
+      <div class="fw-stick-card" data-reveal><span>✅</span><h4>Her orders arrive right</h4><p>Fewer wrong sizes and wrong colours build trust, and trust is what turns a first order into a habit.</p></div>
+    </div>
+
+    <!-- Part 4: marketing cost over time -->
+    <div class="fc" id="fc" data-reveal>
+      <div class="fc-head">
+        <div>
+          <span class="fw-kicker">The long run</span>
+          <h3>Marketing cost per order, over 24 months</h3>
+        </div>
+        <div class="fc-keys">
+          <span><i class="k-ad"></i>Typical ad-led D2C store</span>
+          <span><i class="k-fl"></i>Flynker (target)</span>
+        </div>
+      </div>
+      <svg class="fc-svg" viewBox="0 0 720 290" role="img" aria-labelledby="fcTitle fcDesc">
+        <title id="fcTitle">Illustrative marketing cost per order</title>
+        <desc id="fcDesc">An ad-led store's cost per order rises from an index of 100 to about 120 over 24 months as ad auctions get pricier. Flynker's target falls from 100 to about 35 as repeat and creator-led orders replace paid ads. Illustrative assumptions, not results.</desc>
+        <g class="fc-grid">
+          <line x1="60" y1="40" x2="700" y2="40"/><line x1="60" y1="110" x2="700" y2="110"/>
+          <line x1="60" y1="180" x2="700" y2="180"/><line x1="60" y1="250" x2="700" y2="250"/>
+        </g>
+        <line x1="60" y1="250" x2="700" y2="250" class="fc-axis"/>
+        <g class="fc-ylab">
+          <text x="50" y="44">150</text><text x="50" y="114">100</text><text x="50" y="184">50</text><text x="50" y="254">0</text>
+        </g>
+        <g class="fc-xlab">
+          <text x="60" y="276">Month 1</text><text x="220" y="276">6</text><text x="380" y="276">12</text>
+          <text x="540" y="276">18</text><text x="700" y="276">24</text>
+        </g>
+        <path class="fc-gap" d="M60,110 C300,104 500,92 700,82 L700,201 C480,198 260,170 60,110 Z"/>
+        <path class="fc-line fc-line-ad" d="M60,110 C300,104 500,92 700,82"/>
+        <path class="fc-line fc-line-fl" d="M60,110 C260,170 480,198 700,201"/>
+        <circle class="fc-end fc-end-ad" cx="700" cy="82" r="6"/>
+        <circle class="fc-end fc-end-fl" cx="700" cy="201" r="6"/>
+        <g class="fc-call fc-call-ad"><rect x="530" y="44" width="160" height="28" rx="14"/><text x="610" y="63">≈120 · ads get pricier</text></g>
+        <g class="fc-call fc-call-fl"><rect x="520" y="214" width="170" height="28" rx="14"/><text x="605" y="233">≈35 · target by month 24</text></g>
+        <g class="fc-call fc-call-gap"><text x="420" y="150">The gap is margin</text></g>
+      </svg>
+
+      <div class="fc-mix">
+        <p class="fc-mix-title">Where orders come from <small>(targets)</small></p>
+        <div class="fc-mix-row"><span>Month 1</span><div class="fc-stack"><i class="m-ad" style="--w:70%">Paid ads 70%</i><i class="m-cr" style="--w:25%">Creators 25%</i><i class="m-rp" style="--w:5%"></i></div></div>
+        <div class="fc-mix-row"><span>Month 24</span><div class="fc-stack"><i class="m-ad" style="--w:25%">Ads 25%</i><i class="m-cr" style="--w:40%">Creators 40%</i><i class="m-rp" style="--w:35%">Repeat 35%</i></div></div>
+      </div>
+      <p class="fc-foot"><strong>Illustrative model, not results.</strong> Index: month 1 = 100. Every number on this chart is a target or an assumption we will test in Phase 1. It rests on three mechanics already built into the app: repeat orders arrive through creator channels instead of ads, creators are paid only on delivered sales, and fewer returns mean shipping is not paid twice.</p>
     </div>
   </div>
 </section>
