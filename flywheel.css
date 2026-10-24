@@ -146,6 +146,98 @@
 .m-rp { background: var(--pink-deep); color: var(--white); }
 .fc-foot { font-size: 13px; line-height: 1.6; color: #6f5f6a; margin: 18px 0 0; }
 
+/* ===================== WHY INVEST ===================== */
+.invest { background: linear-gradient(180deg, var(--cream), var(--cream-deep)); }
+.iv-bring { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 50px; }
+.iv-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 30px 28px; box-shadow: var(--shadow-sm); position: relative; overflow: hidden; }
+.iv-card::after { content: ''; position: absolute; left: 0; top: 0; height: 4px; width: 100%; background: linear-gradient(90deg, #ff5fb6, var(--pink)); transform: scaleX(0); transform-origin: left; transition: transform 1s var(--ease) .2s; }
+.iv-card.in-view::after { transform: scaleX(1); }
+.iv-num { font-family: var(--font-display); font-weight: 700; color: var(--pink); font-size: 15px; }
+.iv-card h3 { font-family: var(--font-display); font-size: 23px; margin: 10px 0 10px; font-weight: 600; }
+.iv-card p, .iv-card li { font-size: 15px; line-height: 1.6; color: var(--ink-soft); margin: 0; }
+.iv-card ul { margin: 10px 0 0; padding-left: 18px; }
+.iv-card li { margin-bottom: 4px; }
+.iv-card li::marker { color: var(--pink); }
+
+.iv-path { margin-top: 80px; background: linear-gradient(160deg, var(--ink), #2b0f22 60%, var(--pink-deep)); color: var(--white); border-radius: var(--radius-lg); padding: 44px 44px 30px; box-shadow: var(--shadow-lg); overflow: hidden; }
+.iv-path-head h3 { font-family: var(--font-display); font-size: clamp(26px, 3vw, 38px); margin: 0 0 30px; font-weight: 600; }
+.iv-ladder { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; align-items: end; min-height: 440px; }
+.iv-arrow { position: absolute; left: 0; right: 0; top: 0; height: 230px; width: 100%; pointer-events: none; z-index: 2; }
+.iv-arrow path { fill: none; stroke: #ffb3dc; stroke-width: 3; stroke-dasharray: 8 9; stroke-linecap: round; opacity: 0; transition: opacity 1s ease 1.2s; vector-effect: non-scaling-stroke; }
+.iv-path.in-view .iv-arrow path { opacity: .8; animation: ivdash 1.4s linear infinite; }
+@keyframes ivdash { to { stroke-dashoffset: -34; } }
+.iv-step { display: flex; flex-direction: column; justify-content: flex-end; height: 100%; }
+.iv-bar { position: relative; border-radius: 14px 14px 4px 4px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.12); transform: scaleY(0); transform-origin: bottom; transition: transform 1s var(--ease) var(--d); display: grid; place-items: center; }
+.iv-bar { height: calc(230px * var(--hv, 1)); }
+.iv-step:nth-child(2) .iv-bar { --hv: .22; background: linear-gradient(180deg, #ff5fb6, var(--pink)); border-color: transparent; box-shadow: 0 0 30px rgba(214,6,133,.5); }
+.iv-step:nth-child(3) .iv-bar { --hv: .38; }
+.iv-step:nth-child(4) .iv-bar { --hv: .56; }
+.iv-step:nth-child(5) .iv-bar { --hv: .76; }
+.iv-step:nth-child(6) .iv-bar { --hv: 1; background: linear-gradient(180deg, rgba(255,179,220,.35), rgba(255,255,255,.08)); border-color: rgba(255,179,220,.5); }
+.iv-path.in-view .iv-bar { transform: scaleY(1); }
+.iv-bar span { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; text-align: center; line-height: 1.25; }
+.iv-step-goal .iv-bar span { font-size: 40px; animation: floaty 4s ease-in-out infinite; }
+.iv-step b { display: block; margin-top: 14px; font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: #ffb3dc; }
+.iv-step strong { display: block; font-family: var(--font-display); font-size: 24px; margin: 4px 0 6px; }
+.iv-step p { font-size: 13.5px; line-height: 1.5; color: rgba(255,255,255,.72); margin: 0; min-height: 80px; }
+.iv-small { font-size: 12.5px; color: rgba(255,255,255,.55); margin: 22px 0 0; }
+
+.iv-math { margin-top: 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.iv-math-copy h3 { font-family: var(--font-display); font-size: clamp(26px, 3vw, 38px); line-height: 1.18; margin: 0 0 16px; font-weight: 600; }
+.iv-math-copy p { font-size: 16px; line-height: 1.65; color: var(--ink-soft); margin: 0; }
+.iv-math .fw-kicker, .iv-path-head .fw-kicker { color: var(--pink-deep); }
+.iv-path-head .fw-kicker { color: #ffb3dc; }
+.iv-stats { display: flex; flex-direction: column; gap: 14px; }
+.iv-stat { display: grid; grid-template-columns: 150px 1fr; gap: 18px; align-items: center; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 18px 22px; box-shadow: var(--shadow-sm); }
+.iv-stat > strong { font-family: var(--font-display); font-size: 46px; font-weight: 700; color: var(--ink); line-height: 1; }
+.iv-stat > strong::before { content: '$'; font-size: .6em; vertical-align: .35em; margin-right: 2px; color: var(--pink); }
+.iv-stat-hot > strong::before { content: ''; margin: 0; }
+.iv-stat > strong small { font-size: .5em; margin-left: 2px; color: var(--pink); }
+.iv-stat-l { font-size: 14.5px; line-height: 1.5; color: var(--ink-soft); }
+.iv-src { display: block; font-style: normal; font-size: 12px; color: #8a7a85; margin-top: 3px; }
+.iv-stat-hot { background: var(--pink); border-color: var(--pink); }
+.iv-stat-hot > strong, .iv-stat-hot > strong small, .iv-stat-hot .iv-stat-l { color: var(--white); }
+
+.iv-why { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.iv-why-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 26px 24px; transition: transform .4s var(--ease), box-shadow .4s var(--ease); }
+.iv-why-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-sm); }
+.iv-why-card > span { font-size: 26px; }
+.iv-why-card h4 { font-family: var(--font-display); font-size: 20px; font-weight: 600; margin: 10px 0 8px; }
+.iv-why-card p { font-size: 14.5px; line-height: 1.6; color: var(--ink-soft); margin: 0; }
+.invest .sub-head { margin: 80px 0 24px; }
+/* nine nav links: collapse to the menu button earlier so they never overlap the logo */
+@media (max-width: 1240px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; flex-direction: column; gap: 5px; background: none; border: 0; padding: 8px; cursor: pointer; margin-left: 12px; }
+  .btn-nav { margin-left: auto; }
+  .nav-toggle span { width: 22px; height: 2px; background: var(--ink); border-radius: 2px; }
+  .nav-inner { position: relative; }
+  .nav.open .nav-links { display: flex; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; margin: 0; background: var(--white); border-bottom: 1px solid var(--line); box-shadow: var(--shadow-sm); }
+  .nav.open .nav-links a { padding: 16px 24px; border-top: 1px solid var(--line); font-size: 14.5px; }
+}
+.iv-risk { font-size: 12.5px; line-height: 1.6; color: #8a7a85; max-width: 860px; margin: 40px auto 0; text-align: center; }
+.iv-cta { display: flex; justify-content: center; margin-top: 24px; }
+
+@media (max-width: 980px) {
+  .iv-bring, .iv-why { grid-template-columns: 1fr; }
+  .iv-math { grid-template-columns: 1fr; gap: 30px; }
+  .iv-path { padding: 30px 22px 24px; }
+  .iv-ladder { grid-template-columns: 1fr; min-height: 0; gap: 0; }
+  .iv-arrow, .iv-bar { display: none; }
+  .iv-step { display: block; height: auto; position: relative; padding: 0 0 24px 30px; border-left: 2px dashed rgba(255,179,220,.4); margin-left: 8px; }
+  .iv-step:last-child { border-left-color: transparent; padding-bottom: 0; }
+  .iv-step::before { content: ''; position: absolute; left: -9px; top: 0; width: 16px; height: 16px; border-radius: 50%; background: #2b0f22; border: 2px solid #ffb3dc; }
+  .iv-step:nth-child(2)::before { background: var(--pink); border-color: var(--pink); box-shadow: 0 0 0 6px rgba(214,6,133,.3); }
+  .iv-step-goal::before { content: '🦄'; border: 0; background: none; width: auto; height: auto; left: -14px; top: -6px; font-size: 22px; }
+  .iv-step b { margin-top: 0; }
+  .iv-step p { min-height: 0; }
+}
+@media (max-width: 560px) { .nav-toggle { margin-left: auto; } }
+@media (max-width: 600px) {
+  .iv-stat { grid-template-columns: 112px 1fr; padding: 16px; gap: 12px; }
+  .iv-stat > strong { font-size: 36px; }
+}
+
 @media (max-width: 980px) {
   .fj, .fw { grid-template-columns: 1fr; gap: 44px; }
   .fw-copy { order: 2; }
@@ -175,4 +267,6 @@
   .fj-screen, .fj-chip, .fc-line, .fc-gap, .fc-end, .fc-call, .fc-stack i, .fw-meter-track i { transition: none; }
   .fj-steps li.is-on .fj-bar { animation: none; }
   .fw-ring-in-spin { animation: none; }
+  .iv-bar, .iv-card::after { transition: none; }
+  .iv-path.in-view .iv-arrow path, .iv-step-goal .iv-bar span { animation: none; }
 }

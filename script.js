@@ -57,6 +57,24 @@ if (fj) {
   whenVisible(fj, (v) => { visible = v; fj.classList.toggle('paused', !v || reduceMotion); schedule(); });
 }
 
+// Why invest: count the market numbers up when they scroll into view.
+document.querySelectorAll('[data-count]').forEach(el => {
+  const end = +el.dataset.count;
+  if (reduceMotion) { el.textContent = end; return; }
+  const ob = new IntersectionObserver(([e]) => {
+    if (!e.isIntersecting) return;
+    ob.disconnect();
+    const t0 = performance.now(), dur = 1600;
+    const step = (now) => {
+      const k = Math.min(1, (now - t0) / dur);
+      el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3)));
+      if (k < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }, { threshold: 0.6 });
+  ob.observe(el);
+});
+
 // Flywheel: a dot runs the loop; each turn is faster and the illustrative cost-per-order index drops.
 const wheel = document.getElementById('fwWheel');
 if (wheel) {
