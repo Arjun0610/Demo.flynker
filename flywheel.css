@@ -155,7 +155,7 @@
 
 /* ===================== WHY INVEST ===================== */
 .invest { background: linear-gradient(180deg, var(--cream), var(--cream-deep)); }
-.iv-bring { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 50px; }
+.iv-bring { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 50px; }
 .iv-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 30px 28px; box-shadow: var(--shadow-sm); position: relative; overflow: hidden; }
 .iv-card::after { content: ''; position: absolute; left: 0; top: 0; height: 4px; width: 100%; background: linear-gradient(90deg, #ff5fb6, var(--pink)); transform: scaleX(0); transform-origin: left; transition: transform 1s var(--ease) .2s; }
 .iv-card.in-view::after { transform: scaleX(1); }
