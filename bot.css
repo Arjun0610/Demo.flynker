@@ -22,8 +22,11 @@
 .fb-x svg { width: 16px; height: 16px; }
 
 .fb-dock-body { display: flex; gap: 16px; align-items: flex-start; padding: 18px 18px 8px; background: radial-gradient(120% 90% at 0% 0%, var(--pink-light), var(--white) 70%); }
-.fb-avatar { position: relative; flex: 0 0 128px; width: 128px; height: 128px; }
-.fb-avatar .fb-av { width: 100%; height: 100%; display: block; filter: drop-shadow(0 14px 22px rgba(214, 6, 133, .28)); }
+.fb-avatar { position: relative; flex: 0 0 132px; width: 132px; height: 132px; }
+.fb-avatar .fb-av { position: relative; width: 100%; height: 100%; border-radius: 50%; overflow: hidden; background: #c47a5a; box-shadow: 0 0 0 4px var(--white), 0 0 0 6px transparent, 0 14px 26px -6px rgba(214, 6, 133, .4); transition: box-shadow .3s; }
+.fb-av img, .fb-av video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.fb-av video { opacity: 0; transition: opacity .25s; }
+.fb-av.fb-talking video { opacity: 1; }
 .fb-badge { position: absolute; left: 50%; bottom: -8px; transform: translateX(-50%); white-space: nowrap; padding: 3px 10px; border-radius: 999px; background: var(--ink); color: var(--white); font-size: 11px; font-weight: 700; letter-spacing: .03em; }
 .fb-badge:empty { display: none; }
 [data-state="listening"] .fb-badge { background: #1f9d57; }
@@ -35,13 +38,8 @@
 .fb-caption { margin: 0; max-height: 9.4em; overflow-y: auto; font: 500 14.5px/1.55 var(--font-body); color: var(--ink); }
 
 /* avatar life */
-.fb-av .fb-head { transform-origin: 150px 290px; transform-box: view-box; }
-.fb-av-ring { stroke: transparent; transition: stroke .3s; }
-[data-state="speaking"] .fb-avatar .fb-head { animation: fbNod 2.4s infinite ease-in-out; }
-[data-state="listening"] .fb-avatar .fb-head { transform: rotate(-2.5deg); transition: transform .4s; }
-[data-state="thinking"] .fb-avatar .fb-head { transform: rotate(2deg); transition: transform .4s; }
-[data-state="listening"] .fb-avatar .fb-av-ring { stroke: #3ddc84; animation: fbGlow 1.2s infinite; }
-[data-state="speaking"] .fb-avatar .fb-av-ring { stroke: var(--pink); }
+[data-state="speaking"] .fb-avatar .fb-av { box-shadow: 0 0 0 4px var(--white), 0 0 0 6px var(--pink), 0 14px 26px -6px rgba(214, 6, 133, .4); }
+[data-state="listening"] .fb-avatar .fb-av { box-shadow: 0 0 0 4px var(--white), 0 0 0 6px #3ddc84, 0 14px 26px -6px rgba(31, 157, 87, .45); animation: fbGlow 1.2s infinite; }
 
 .fb-ctrl { display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 18px 4px; }
 .fb-btn { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--line); border-radius: 999px; padding: 9px 14px; background: var(--white); color: var(--ink); font: 700 13px/1 var(--font-body); cursor: pointer; transition: background .2s, border-color .2s; }
@@ -67,8 +65,7 @@
 
 @keyframes fbIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 @keyframes fbPulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(31,157,87,.5); } 50% { box-shadow: 0 0 0 8px rgba(31,157,87,0); } }
-@keyframes fbNod { 0%, 100% { transform: rotate(0); } 30% { transform: rotate(1deg) translateY(1px); } 65% { transform: rotate(-.9deg); } }
-@keyframes fbGlow { 0%, 100% { stroke-opacity: 1; } 50% { stroke-opacity: .35; } }
+@keyframes fbGlow { 50% { box-shadow: 0 0 0 4px var(--white), 0 0 0 9px rgba(61, 220, 132, .45), 0 14px 26px -6px rgba(31, 157, 87, .45); } }
 @keyframes fbSpot { from { opacity: 0; transform: scale(.985); } to { opacity: 1; transform: none; } }
 
 @media (max-width: 560px) {
@@ -84,5 +81,5 @@
   .fb-foot { font-size: 10.5px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .fb-launch, .fb-hello, .fb-dock, .fb-av *, .fb-spot::after, .fb-primary { animation: none !important; transition: none !important; }
+  .fb-launch, .fb-hello, .fb-dock, .fb-av, .fb-spot::after, .fb-primary { animation: none !important; transition: none !important; }
 }

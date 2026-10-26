@@ -35,27 +35,18 @@
     close: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg>'
   };
 
-  // Host avatar: Tharun's photo, with the jaw layer lowered in time with the voice (no external service).
-  const FACE = new URL('assets/team/tharun-host.jpg', me.src).href;
+  // Host avatar: a short AI-generated clip of Tharun talking (made with Gemini), looped while the voice plays.
+  const asset = function (f) { return new URL('assets/team/' + f, me.src).href; };
+  const IDLE = asset('tharun-idle.jpg'), TALK = asset('tharun-talk.mp4');
   const AVATAR =
-    '<svg class="fb-av" viewBox="0 0 300 300" aria-hidden="true">' +
-      '<defs><clipPath id="fbClip"><circle cx="150" cy="150" r="148"/></clipPath>' +
-      '<filter id="fbSoft"><feGaussianBlur stdDeviation="2.5"/></filter><filter id="fbSofter"><feGaussianBlur stdDeviation="0.9"/></filter>' +
-      '<mask id="fbJawMask"><path d="M110 172 Q160 167 208 172 L206 192 Q190 216 160 218 Q130 216 114 192 Z" fill="#fff" filter="url(#fbSoft)"/></mask></defs>' +
-      '<g clip-path="url(#fbClip)"><g class="fb-head">' +
-        '<image href="' + FACE + '" width="300" height="300"/>' +
-        '<g filter="url(#fbSofter)"><ellipse class="fb-mouth" cx="160" cy="173" rx="19" ry="1.5" fill="#2e1010"/>' +
-          '<rect class="fb-teeth" x="149" y="171.5" width="22" height="0" rx="1.5" fill="#cfc3b8" opacity="0"/></g>' +
-        '<g class="fb-jaw"><image href="' + FACE + '" width="300" height="300" mask="url(#fbJawMask)"/></g>' +
-      '</g></g>' +
-      '<circle class="fb-av-ring" cx="150" cy="150" r="146" fill="none" stroke-width="6"/>' +
-    '</svg>';
+    '<div class="fb-av"><img class="fb-av-still" src="' + IDLE + '" alt="">' +
+      '<video class="fb-av-talk" src="' + TALK + '" poster="' + IDLE + '" muted loop playsinline preload="auto"></video></div>';
 
   const root = document.createElement('div');
   root.className = 'fb-root';
   root.innerHTML =
     '<button class="fb-launch" type="button" aria-label="Start a guided tour with Flynker AI">' +
-      '<span class="fb-launch-av"><img src="' + FACE + '" alt=""></span><span class="fb-launch-txt"><b>Meet Flynker AI</b><small>3-min tour with AI Tharun</small></span></button>' +
+      '<span class="fb-launch-av"><img src="' + IDLE + '" alt=""></span><span class="fb-launch-txt"><b>Meet Flynker AI</b><small>3-min tour with AI Tharun</small></span></button>' +
     '<section class="fb-dock" role="dialog" aria-label="Flynker AI guided tour">' +
       '<header class="fb-dock-head"><span><b>Flynker AI</b> · AI avatar of founder Tharun Bandla</span>' +
         '<button class="fb-x" type="button" aria-label="Close">' + icon.close + '</button></header>' +
@@ -83,7 +74,7 @@
   const dock = $('.fb-dock'), caption = $('.fb-caption'), where = $('.fb-where'), bar = $('.fb-progress i');
   const ppBtn = $('.fb-pp'), nextBtn = $('.fb-next'), askBtn = $('.fb-ask'), replayBtn = $('.fb-replay');
   const typeForm = $('.fb-type'), typeInput = typeForm.querySelector('input');
-  const av = $('.fb-avatar .fb-av'), jaw = av.querySelector('.fb-jaw'), mouthHole = av.querySelector('.fb-mouth'), teeth = av.querySelector('.fb-teeth');
+  const av = $('.fb-avatar .fb-av'), talk = av.querySelector('video');
 
   /* ---------- audio out (Gemini voice, browser voice as fallback) ---------- */
   const player = new Audio();
@@ -159,27 +150,23 @@
     if ('speechSynthesis' in window) speechSynthesis.resume();
   }
 
-  /* ---------- avatar animation: the jaw follows the voice ---------- */
-  let mouth = 0;
+  /* ---------- avatar animation: the talking clip plays while the voice is audible ---------- */
+  let quietSince = 0;
   function frame(t) {
-    let target = 0;
+    let talking = false;
     if (state === 'speaking') {
       if (analyser && !player.paused && player.src.indexOf('blob:') === 0) {
         analyser.getByteTimeDomainData(levels);
         let sum = 0;
         for (let i = 0; i < levels.length; i++) { const x = (levels[i] - 128) / 128; sum += x * x; }
-        target = Math.min(1, Math.sqrt(sum / levels.length) * 5);
-      } else if (browserTalking) {
-        target = 0.35 + 0.45 * Math.abs(Math.sin(t / 70)) * (0.6 + 0.4 * Math.sin(t / 23));
+        if (Math.sqrt(sum / levels.length) > 0.02) quietSince = 0; else if (!quietSince) quietSince = t;
+        talking = !quietSince || t - quietSince < 350;          // stop between sentences, not between words
+      } else {
+        talking = browserTalking;
       }
     }
-    mouth += (target - mouth) * 0.45;
-    jaw.setAttribute('transform', 'translate(0 ' + (mouth * 6.5).toFixed(2) + ')');
-    mouthHole.setAttribute('cy', (173 + mouth * 3).toFixed(2));
-    mouthHole.setAttribute('rx', (19 - mouth * 2).toFixed(2));
-    mouthHole.setAttribute('ry', (1.5 + mouth * 6).toFixed(2));
-    teeth.setAttribute('height', (mouth * 2.6).toFixed(2));
-    teeth.setAttribute('opacity', (mouth * 0.55).toFixed(2));
+    if (talking && talk.paused) { talk.play().catch(function () {}); av.classList.add('fb-talking'); }
+    else if (!talking && !talk.paused) { talk.pause(); av.classList.remove('fb-talking'); }
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
