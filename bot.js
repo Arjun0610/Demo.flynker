@@ -64,6 +64,7 @@
         '<button class="fb-btn fb-primary fb-ask" type="button"></button>' +
         '<button class="fb-btn fb-replay" type="button">' + icon.replay + '<span>Replay tour</span></button>' +
       '</div>' +
+      '<div class="fb-chips"></div>' +
       '<form class="fb-type"><input type="text" maxlength="600" placeholder="Or type a question…" aria-label="Type a question">' +
         '<button type="submit" aria-label="Send">' + icon.send + '</button></form>' +
       '<p class="fb-foot">AI answers can be wrong; the founders have the final word. Questions are saved to help us improve. <a href="' + CALL + '" target="_blank" rel="noopener">Book a founder call</a></p>' +
@@ -74,6 +75,15 @@
   const dock = $('.fb-dock'), caption = $('.fb-caption'), where = $('.fb-where'), bar = $('.fb-progress i');
   const ppBtn = $('.fb-pp'), nextBtn = $('.fb-next'), askBtn = $('.fb-ask'), replayBtn = $('.fb-replay');
   const typeForm = $('.fb-type'), typeInput = typeForm.querySelector('input');
+  const QUESTIONS = ['What is Flynker?', 'How are you different from Myntra or Meesho?', 'Why can’t competitors copy you?',
+    'Why should we invest now?', 'What will the ₹1.5 crore achieve?', 'How do you make money?', 'Who is the team?'];
+  const chips = $('.fb-chips');
+  QUESTIONS.forEach(function (q) {
+    const b = document.createElement('button');
+    b.type = 'button'; b.textContent = q;
+    b.addEventListener('click', function () { unlockAudio(); ask(q); });
+    chips.appendChild(b);
+  });
   const av = $('.fb-avatar .fb-av'), talk = av.querySelector('video');
 
   /* ---------- audio out (Gemini voice, browser voice as fallback) ---------- */
