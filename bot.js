@@ -139,6 +139,8 @@
     if (!('speechSynthesis' in window)) { setTimeout(done, Math.min(9000, text.length * 55)); return; }
     const u = new SpeechSynthesisUtterance(text.replace(/https?:\/\/\S+/g, 'the link on the page'));
     const v = bestVoice(); if (v) u.voice = v;
+    spokenAt = 0; spokenTotal = text.length;
+    u.onboundary = function (e) { spokenAt = e.charIndex || spokenAt; };
     u.onstart = function () { browserTalking = true; };
     u.onend = u.onerror = done;
     browserTalking = true;
@@ -151,7 +153,7 @@
   }
 
   /* ---------- avatar animation: the talking clip plays while the voice is audible ---------- */
-  let quietSince = 0;
+  let quietSince = 0, spokenAt = 0, spokenTotal = 0;
   function frame(t) {
     let talking = false;
     if (state === 'speaking') {
@@ -170,6 +172,16 @@
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
+
+  // Keep the spoken part of a long caption in view.
+  setInterval(function () {
+    if (state !== 'speaking') return;
+    let progress = -1;
+    if (player.src.indexOf('blob:') === 0 && player.duration > 0) progress = player.currentTime / player.duration;
+    else if (browserTalking && spokenTotal) progress = spokenAt / spokenTotal;
+    const room = caption.scrollHeight - caption.clientHeight;
+    if (progress >= 0 && room > 0) caption.scrollTop += (Math.max(0, Math.min(1, progress * 1.15 - 0.15)) * room - caption.scrollTop) * 0.3;
+  }, 100);
 
   /* ---------- state + controls ---------- */
   function setState(s) {
@@ -229,6 +241,7 @@
     goTo(data.section);
     setWhere((i + 1) + ' of ' + total + ' · ' + (LABELS[data.section] || ''), (i + 1) / total);
     caption.textContent = data.reply;
+    caption.scrollTop = 0;
     setState('speaking');
     speak(data.reply, data.audio, function () {
       if (id !== runId) return;
@@ -288,6 +301,7 @@
     history = history.slice(-20);
     store.set('fb_history', history);
     caption.textContent = reply;
+    caption.scrollTop = 0;
     setState('speaking');
     speak(reply, data && data.audio, function () { if (id === runId) listen(); });
   }
