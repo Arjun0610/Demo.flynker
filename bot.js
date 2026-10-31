@@ -118,7 +118,9 @@
   function bestVoice() {
     const vs = ('speechSynthesis' in window) ? speechSynthesis.getVoices() : [];
     const pick = function (re, lang) { return vs.find(function (x) { return re.test(x.name) && lang.test(x.lang); }); };
-    return pick(/natural|online|google/i, /en-IN/i) || pick(/./, /en-IN/i) || pick(/natural|online|google/i, /^en/i) || pick(/./, /^en/i);
+    // Indian English male first (Edge: Prabhat, Windows: Ravi), then any Indian English voice, then any English
+    return pick(/prabhat|ravi|\bmale\b/i, /en-IN/i) || pick(/natural|online|google/i, /en-IN/i) || pick(/./, /en-IN/i) ||
+      pick(/natural|online|google/i, /^en/i) || pick(/./, /^en/i);
   }
   function stopSpeaking() {
     finishFn = null; player.onended = null; player.pause();
