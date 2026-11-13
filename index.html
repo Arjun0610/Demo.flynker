@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="flywheel.css?v=20261026a">
 <link rel="stylesheet" href="traction.css?v=20261025a">
 <link rel="stylesheet" href="bot.css?v=20261026g">
+<link rel="stylesheet" href="capsule.css?v=20261113a">
 </head>
 <body>
 
@@ -140,6 +141,159 @@
       </video>
     </div>
     <p class="demo-note" data-reveal>Screens are from our working apps. Brands and creators in the demo are sample data, not signed partners. The voiceover is AI-generated.</p>
+  </div>
+</section>
+
+<!-- ===== FLYNK → STYLE CAPSULE (animated walkthrough) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="ic-kurta" viewBox="0 0 100 120"><path d="M38 8 50 18 62 8 80 15 97 40 85 49 76 37 79 114H21l3-77-9 12L3 40 20 15Z" fill="#fff4d6" stroke="#9A0460" stroke-width="3" stroke-linejoin="round"/><path d="M42 10 50 34 58 10" fill="none" stroke="#D60685" stroke-width="3"/><g fill="#D60685"><circle cx="50" cy="48" r="2.6"/><circle cx="50" cy="60" r="2.6"/><circle cx="50" cy="72" r="2.6"/></g><path d="M22 100h56" stroke="#D60685" stroke-width="5" stroke-dasharray="4 4"/></symbol>
+    <symbol id="ic-jutti" viewBox="0 0 100 60"><path d="M6 44c10-16 30-26 52-24 14 1 26 7 34 12 4 3 3 10-2 11L14 50c-6 1-10-1-8-6Z" fill="#ffd36b" stroke="#9A0460" stroke-width="3" stroke-linejoin="round"/><path d="M40 24c6 6 16 8 26 6" fill="none" stroke="#D60685" stroke-width="3"/><g fill="#D60685"><circle cx="52" cy="34" r="2"/><circle cx="62" cy="33" r="2"/><circle cx="72" cy="34" r="2"/></g></symbol>
+    <symbol id="ic-vest" viewBox="0 0 100 110"><path d="M30 6 42 12 50 40 58 12 70 6 84 16 82 40 92 104H56L50 60 44 104H8L18 40 16 16Z" fill="#2b5b8a" stroke="#150912" stroke-width="3" stroke-linejoin="round"/><path d="M42 12 50 40 58 12" fill="none" stroke="#ffd36b" stroke-width="3"/><g fill="#ffd36b"><circle cx="50" cy="66" r="2.6"/><circle cx="50" cy="78" r="2.6"/><circle cx="50" cy="90" r="2.6"/></g><path d="M22 62h12" stroke="#ffd36b" stroke-width="3"/></symbol>
+    <symbol id="ic-stole" viewBox="0 0 100 60"><path d="M4 18c16-10 30 10 46 0s30 10 46 0v24c-16 10-30-10-46 0S20 32 4 42Z" fill="#D60685" stroke="#9A0460" stroke-width="3" stroke-linejoin="round"/><path d="M4 26c16-10 30 10 46 0s30 10 46 0" fill="none" stroke="#ffd36b" stroke-width="2.5" stroke-dasharray="3 3"/></symbol>
+    <symbol id="ic-potli" viewBox="0 0 80 90"><path d="M26 22c-14 12-20 30-16 46 3 12 16 18 30 18s27-6 30-18c4-16-2-34-16-46Z" fill="#ff79bf" stroke="#9A0460" stroke-width="3"/><path d="M24 22h32" stroke="#9A0460" stroke-width="4" stroke-linecap="round"/><path d="M34 22c-6-8-6-14 0-18M46 22c6-8 6-14 0-18" fill="none" stroke="#9A0460" stroke-width="3"/><g fill="#fff4d6"><circle cx="40" cy="52" r="5"/><circle cx="26" cy="58" r="3"/><circle cx="54" cy="58" r="3"/></g></symbol>
+    <symbol id="ic-ear" viewBox="0 0 80 90"><g fill="#ffd36b" stroke="#9A0460" stroke-width="3"><circle cx="22" cy="12" r="6"/><circle cx="58" cy="12" r="6"/><path d="M22 20c-12 16-12 32 0 42 12-10 12-26 0-42ZM58 20c-12 16-12 32 0 42 12-10 12-26 0-42Z"/></g><g fill="#D60685"><circle cx="22" cy="70" r="5"/><circle cx="58" cy="70" r="5"/></g></symbol>
+  </defs>
+</svg>
+<section class="section fk" id="capsule">
+  <div class="container">
+    <p class="eyebrow center" data-reveal>From a Flynk to a full basket</p>
+    <h2 class="display-lg center" data-reveal>He watched one reel.<br>He bought <em>the whole look.</em></h2>
+    <p class="section-lede center" data-reveal>This is the moment Flynker is built around. A shopper sees a creator's Flynk, buys the piece in one tap, then buys the creator's complete Style Capsule. No ad brought him there, and the AI checked the fit before he paid.</p>
+
+    <div class="fk-wrap" data-reveal>
+      <div class="fk-stage">
+        <div class="fk" id="fk" data-scene="0" aria-label="Animated walkthrough: from a creator's Flynk to buying a Style Capsule">
+          <div class="fk-phone">
+            <div class="fk-screen">
+              <div class="fk-notch"></div>
+              <div class="fk-bag" aria-hidden="true">🛍️<i id="fkBadge">0</i></div>
+
+              <!-- scene 0: the Flynk -->
+              <div class="fk-reel" aria-hidden="true">
+                <div class="fk-glow"></div>
+                <svg class="fk-look" viewBox="0 0 100 120"><use href="#ic-kurta"/></svg>
+                <div class="fk-reelbar"><i></i></div>
+                <div class="fk-top"><span>FLYNKS</span><span>Following · For you</span></div>
+                <div class="fk-rail">
+                  <div class="fk-heart" id="fkHeart"><b>♥</b><span id="fkLikes">2.4k</span></div>
+                  <div><b>💬</b>186</div>
+                  <div><b>↗</b>Share</div>
+                </div>
+                <div class="fk-meta">
+                  <div class="fk-creator"><span class="fk-ava">MS</span>@meera.styles<span class="fk-follow">Following</span></div>
+                  <p class="fk-cap">Festive co-ord, styled 3 ways ✨ Tap to shop the look</p>
+                </div>
+                <div class="fk-tags">
+                  <div class="fk-tag" id="fkTagOne"><span class="fk-thumb"><svg width="20" height="24"><use href="#ic-kurta"/></svg></span><span>Kurta set<small>₹1,899</small></span></div>
+                  <div class="fk-tag fk-tag-cap" id="fkTagCap"><span class="fk-thumb"><svg width="20" height="22"><use href="#ic-vest"/></svg></span><span>Shop the look<small>4 pieces</small></span></div>
+                </div>
+              </div>
+              <div class="fk-dim"></div>
+
+              <!-- scene 1: product + AI fit check -->
+              <div class="fk-sheet fk-s1" aria-hidden="true">
+                <div class="fk-ptitle">
+                  <div class="fk-pimg"><svg width="52" height="62"><use href="#ic-kurta"/></svg></div>
+                  <div><div class="fk-pbrand">D2C label</div><div class="fk-pname">Mustard festive kurta set</div><div class="fk-price">₹1,899</div></div>
+                </div>
+                <div class="fk-match">
+                  <div class="fk-ring"><svg viewBox="0 0 38 38"><circle class="bg" cx="19" cy="19" r="16" pathLength="100"/><circle class="fg" cx="19" cy="19" r="16" pathLength="100"/></svg><b>92%</b></div>
+                  <span>Aria: suits your warm skin tone. Size M fits your build.</span>
+                </div>
+                <div class="fk-btn" id="fkAdd">Add to bag</div>
+              </div>
+
+              <!-- scene 2: Style Capsule -->
+              <div class="fk-sheet fk-s2" aria-hidden="true">
+                <div class="fk-caph"><span class="fk-ava">MS</span><div><strong>Complete the look</strong>Style Capsule by @meera.styles</div></div>
+                <div class="fk-grid">
+                  <div class="fk-item in-bag"><div class="fk-ico"><svg width="34" height="40"><use href="#ic-kurta"/></svg></div>Kurta set<span>₹1,899</span></div>
+                  <div class="fk-item"><div class="fk-ico"><svg width="46" height="28"><use href="#ic-jutti"/></svg></div>Embroidered juttis<span>₹1,299</span></div>
+                  <div class="fk-item"><div class="fk-ico"><svg width="34" height="38"><use href="#ic-vest"/></svg></div>Nehru jacket<span>₹1,499</span></div>
+                  <div class="fk-item"><div class="fk-ico"><svg width="46" height="28"><use href="#ic-stole"/></svg></div>Silk stole<span>₹599</span></div>
+                </div>
+                <div class="fk-total"><span>Whole capsule · 3 brands</span><b>₹5,296</b></div>
+                <div class="fk-btn" id="fkCap">Add the full capsule</div>
+              </div>
+
+              <!-- scene 3: checkout -->
+              <div class="fk-sheet fk-s3" aria-hidden="true">
+                <div class="fk-pname" style="margin-bottom:6px">Your bag</div>
+                <div class="fk-row"><span>4 items · 1 complete look</span><b>₹5,296</b></div>
+                <div class="fk-row"><span>Fit &amp; colour checked by Aria</span><span class="fk-ok">✓ All 4</span></div>
+                <div class="fk-row"><span>Found via</span><b>@meera.styles</b></div>
+                <div class="fk-row"><span>Payment</span><b>Cash on delivery</b></div>
+                <div class="fk-btn" id="fkPlace">Place order</div>
+              </div>
+
+              <!-- scene 4: outcome -->
+              <div class="fk-done" aria-hidden="true">
+                <div>
+                  <div class="fk-check">✓</div>
+                  <h4>Order placed</h4>
+                  <p>@meera.styles earns her commission only when it's delivered.</p>
+                  <div class="fk-wins">
+                    <div>🧺 Basket: 1 item → 4 items</div>
+                    <div>📣 Ad spend on this order: ₹0</div>
+                    <div>📦 Fit checked before checkout → fewer returns</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="fk-finger" id="fkFinger" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+        <div class="fk-controls">
+          <button type="button" class="fk-play" id="fkPlay">❚❚ Pause</button>
+          <button type="button" class="fk-play" id="fkReplay" style="background:var(--pink)">↺ Replay</button>
+        </div>
+        <p class="fk-note">Animation of the app flow. The creator, products and prices are an example, not real partners or real orders.</p>
+      </div>
+
+      <ol class="fk-steps" id="fkSteps">
+        <li class="is-on" data-scene="0" style="--dur:4.6s"><button type="button"><span class="fk-n">01</span><span class="fk-t"><strong>He watches a Flynk, not an ad</strong><span>Arjun follows a creator who styles festive looks. Her Flynk, a short shoppable reel, shows a kurta set three ways. Every product in it is tagged.</span><em class="fk-k">CAC: ₹0 paid to reach him</em></span></button><i class="fk-bar"></i></li>
+        <li data-scene="1" style="--dur:4.4s"><button type="button"><span class="fk-n">02</span><span class="fk-t"><strong>One tap, and the AI checks the fit</strong><span>He taps the kurta. Aria has already read his selfie, so it shows a match score for his skin tone and the right size before he adds it to his bag.</span><em class="fk-k">RTO: "will it suit me?" answered before buying</em></span></button><i class="fk-bar"></i></li>
+        <li data-scene="2" style="--dur:5.2s"><button type="button"><span class="fk-n">03</span><span class="fk-t"><strong>Then he buys the whole Style Capsule</strong><span>"Complete the look" opens the creator's capsule: juttis, a Nehru jacket and a silk stole from three different brands, styled to go together. One tap adds all of it.</span><em class="fk-k">Basket: one item becomes a complete look</em></span></button><i class="fk-bar"></i></li>
+        <li data-scene="3" style="--dur:4s"><button type="button"><span class="fk-n">04</span><span class="fk-t"><strong>Checkout, credited to the creator</strong><span>Four fit-checked items, cash on delivery, and the sale is attributed to the creator automatically.</span><em class="fk-k">Brands pay commission on delivery, not for clicks</em></span></button><i class="fk-bar"></i></li>
+        <li data-scene="4" style="--dur:5s"><button type="button"><span class="fk-n">05</span><span class="fk-t"><strong>Everyone wins on the same order</strong><span>The shopper gets a whole look that suits him. Three brands each make a sale without buying an ad. The creator is paid only for what's delivered, so she styles what really fits.</span><em class="fk-k">Bigger basket · lower CAC · lower RTO</em></span></button><i class="fk-bar"></i></li>
+      </ol>
+    </div>
+
+    <div class="fk-why" id="fkWhy">
+      <div class="fk-card fk-card-cap" data-reveal>
+        <span class="fk-label">Why Style Capsules change the maths</span>
+        <h3>Shoppers buy looks, not single items.</h3>
+        <p>Every other app sells one product at a time and leaves the shopper to work out what goes with it. A Style Capsule is a complete outfit, built by a creator from several brands, bought in one tap. That raises the basket size, and one delivery now carries several items.</p>
+        <div class="fk-basket">
+          <div class="fk-bk"><div><span>One item (our store's real AOV today)</span><b>₹1,899</b></div><i style="--w:36%"></i></div>
+          <div class="fk-bk cap"><div><span>The 4-piece capsule above</span><b>₹5,296 · 2.8×</b></div><i style="--w:100%"></i></div>
+        </div>
+        <p class="fk-fine">₹1,899 is the real average order value of our live store (300+ orders, mostly organic). The capsule basket is the example above, an illustration of the target, not a result yet.</p>
+      </div>
+      <div class="fk-card" data-reveal>
+        <span class="fk-label">Lower CAC</span>
+        <h3>Creators bring the customer. Brands pay only on delivery.</h3>
+        <ul>
+          <li><strong>Discovery without ad auctions.</strong> Shoppers arrive through creators they already follow, not through Instagram or Google ads that every brand bids on.</li>
+          <li><strong>Pay for sales, not reach.</strong> Commission is credited only when the order is delivered.</li>
+          <li><strong>One shared audience.</strong> A shopper won by one creator can buy from 120+ brands, so no brand pays to win the same customer alone.</li>
+          <li><strong>Repeat without re-buying.</strong> Followers come back through creator channels and new capsules.</li>
+        </ul>
+      </div>
+      <div class="fk-card" data-reveal>
+        <span class="fk-label">Lower RTO</span>
+        <h3>Fewer parcels come back, because fewer wrong ones go out.</h3>
+        <ul>
+          <li><strong>Fit and colour checked first.</strong> One selfie gives a skin-tone and body read, a match score and a virtual try-on before checkout.</li>
+          <li><strong>Pieces that go together.</strong> A capsule is styled as one outfit, so fewer items come back for "doesn't match anything I own".</li>
+          <li><strong>Creators are paid only on delivery.</strong> They have every reason to recommend what really suits their followers.</li>
+          <li><strong>The Confidence Engine learns.</strong> Every return teaches it what suits which skin tone and body type.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="fk-foot" data-reveal>CAC and RTO reductions are what Flynker is built to prove with the pre-seed. They are targets, and we'll report the real numbers in investor updates.</p>
   </div>
 </section>
 
@@ -643,12 +797,12 @@
   <div class="container">
     <p class="eyebrow center" data-reveal>Go-to-market</p>
     <h2 class="display-lg center" data-reveal>Win India first.<br>Then take Indian design <em>to the world.</em></h2>
-    <p class="section-lede center" data-reveal>We start where the economics are hardest and the craft is richest: Indian ethnic and occasion wear on COD. A model that works there can work anywhere.</p>
+    <p class="section-lede center" data-reveal>We start where the economics are hardest: D2C fashion brands selling on COD, squeezed by ad costs and returns. A model that fixes both there can work anywhere.</p>
     <div class="gtm-track">
       <div class="gtm-step" data-reveal>
         <span class="gtm-phase">Phase 1 · Now</span>
-        <h3>Telangana &amp; Andhra</h3>
-        <p>Onboard designers and weavers from handloom clusters like Pochampally, Gadwal and Narayanpet. Recruit micro-creators. Ride the wedding and festive seasons.</p>
+        <h3>South India</h3>
+        <p>Onboard 120+ D2C fashion brands across womenswear, menswear, footwear, beauty and lifestyle (target), plus independent designers. Recruit micro-creators to style them. Ride the wedding and festive seasons.</p>
       </div>
       <div class="gtm-step" data-reveal>
         <span class="gtm-phase">Phase 2 · Year 1–2</span>
@@ -696,7 +850,7 @@
     <p class="sub-head" data-reveal>18 months from pre-seed to seed-ready</p>
     <div class="roadmap-track">
       <div class="roadmap-step" data-reveal><div class="rm-dot"></div><span class="rm-status status-next">Months 0–3</span><h4>Launch all four apps</h4><p>Play Store launch of the shopper, creator &amp; designer, and brand apps.</p></div>
-      <div class="roadmap-step" data-reveal><div class="rm-dot"></div><span class="rm-status status-next">Months 3–6</span><h4>First cohorts</h4><p>Designer onboarding from the Telangana and Andhra clusters and the first creator cohorts.</p></div>
+      <div class="roadmap-step" data-reveal><div class="rm-dot"></div><span class="rm-status status-next">Months 3–6</span><h4>First cohorts</h4><p>Onboarding 120+ D2C brands across South India (target) and the first creator cohorts.</p></div>
       <div class="roadmap-step" data-reveal><div class="rm-dot"></div><span class="rm-status status-next">Months 6–12</span><h4>Prove the loop</h4><p>Measured RTO reduction and repeat purchase through channels.</p></div>
       <div class="roadmap-step" data-reveal><div class="rm-dot"></div><span class="rm-status status-next">Months 12–18</span><h4>Seed-ready</h4><p>Designer Pro SaaS beta, first global pilot, scaling monthly GMV.</p></div>
     </div>
@@ -739,7 +893,7 @@
         <svg class="iv-arrow" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true">
           <path d="M20,280 C260,270 420,230 560,170 S860,40 985,18"/>
         </svg>
-        <div class="iv-step" style="--h:22%; --d:0s"><div class="iv-bar"><span>You<br>are here</span></div><b>Now · Pre-seed</b><strong>₹1.5 Cr</strong><p>Launch the apps, onboard brands and creators, prove the flywheel in Telangana &amp; Andhra.</p></div>
+        <div class="iv-step" style="--h:22%; --d:0s"><div class="iv-bar"><span>You<br>are here</span></div><b>Now · Pre-seed</b><strong>₹1.5 Cr</strong><p>Launch the apps, onboard brands and creators, prove the flywheel in South India.</p></div>
         <div class="iv-step" style="--h:38%; --d:.15s"><div class="iv-bar"></div><b>Month ~18 · Seed</b><strong>Proof</strong><p>Lower RTO and repeat buying shown with data. Monthly GMV scaling in India.</p></div>
         <div class="iv-step" style="--h:56%; --d:.3s"><div class="iv-bar"></div><b>Year ~3 · Series A</b><strong>India scale</strong><p>Creator-led expansion across Tier 1–3 cities. First global pilot.</p></div>
         <div class="iv-step" style="--h:76%; --d:.45s"><div class="iv-bar"></div><b>Year 4–5 · Series B+</b><strong>Global</strong><p>Indian design for buyers in the UAE, UK and US, then creators and designers worldwide.</p></div>
@@ -784,13 +938,13 @@
     <div class="ask-copy" data-reveal>
       <p class="eyebrow light">The Ask</p>
       <h2 class="ask-amount">₹1.5 Cr</h2>
-      <p class="ask-sub">Pre-seed for 18 months of runway, to launch the apps, onboard designers, brands and creators, and prove that personalised fashion cuts RTO and CAC.</p>
+      <p class="ask-sub">Pre-seed for 18 months of runway, to launch the apps, onboard 120+ D2C brands, creators and designers, and prove that personalised fashion cuts RTO and CAC.</p>
       <a href="https://calendly.com/tharunkarthikeya98/30min" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a Founder Call</a>
     </div>
     <div class="ask-funds" data-reveal>
       <p class="funds-title">Use of funds</p>
       <div class="fund-row"><div class="fund-label"><span>Product &amp; AI</span><strong>40%</strong></div><div class="fund-bar"><i style="width:40%"></i></div></div>
-      <div class="fund-row"><div class="fund-label"><span>Designer &amp; creator acquisition</span><strong>30%</strong></div><div class="fund-bar"><i style="width:30%"></i></div></div>
+      <div class="fund-row"><div class="fund-label"><span>Brand &amp; creator acquisition</span><strong>30%</strong></div><div class="fund-bar"><i style="width:30%"></i></div></div>
       <div class="fund-row"><div class="fund-label"><span>Team</span><strong>20%</strong></div><div class="fund-bar"><i style="width:20%"></i></div></div>
       <div class="fund-row"><div class="fund-label"><span>Ops, legal &amp; buffer</span><strong>10%</strong></div><div class="fund-bar"><i style="width:10%"></i></div></div>
       <p class="funds-note">Hiring next: ML engineer, creator partnerships lead.</p>
@@ -802,7 +956,7 @@
 <section class="section team" id="team">
   <div class="container">
     <p class="eyebrow center" data-reveal>Team</p>
-    <h2 class="display-lg center" data-reveal>Builders from Telangana,<br>building for <em>designers everywhere.</em></h2>
+    <h2 class="display-lg center" data-reveal>Builders from South India,<br>building for <em>brands everywhere.</em></h2>
     <div class="team-grid team-grid-3">
       <div class="team-card" data-reveal><img class="team-avatar team-photo" src="assets/team/tharun.jpg" alt="Tharun Bandla" width="96" height="96" loading="lazy"><h3>Tharun Bandla</h3><p class="team-role">Founder &amp; CEO</p><p class="team-prev">Ex-Genpact</p><p class="team-bio">Built Flynker's entire tech stack from scratch: four apps, the real-time backend and the AI features. Grew a 7,000+ shopper waitlist and ran the Creator Corner pilot.</p><a class="team-in" href="https://www.linkedin.com/in/-tharun-kumar-/" target="_blank" rel="noopener">LinkedIn</a></div>
       <div class="team-card" data-reveal><img class="team-avatar team-photo" src="assets/team/vinay.jpg" alt="Vinay Kumar Racharla" width="96" height="96" loading="lazy"><h3>Vinay Kumar Racharla</h3><p class="team-role">Co-founder &amp; MD</p><p class="team-prev">Ex-Capgemini</p><p class="team-bio">Co-founder. Leads company operations and owns brand and vendor onboarding for the Phase 1 rollout.</p><a class="team-in" href="https://www.linkedin.com/in/vinay-kumar-racharla-a3a073378/" target="_blank" rel="noopener">LinkedIn</a></div>
@@ -850,7 +1004,7 @@
       </details>
       <details class="faq-item">
         <summary>Why would brands and designers join a new marketplace?</summary>
-        <p>Because we fix the two costs that hurt them most: ads to find customers and returns that come back. Brands get a creator sales force and fit-confident shoppers in one place, plus a simple app to manage stock and orders. In Phase 1 we onboard designers and weavers from the Telangana and Andhra handloom clusters, with a target of 120+ brands across women's and men's wear.</p>
+        <p>Because we fix the two costs that hurt them most: ads to find customers and returns that come back. Brands get a creator sales force and fit-confident shoppers in one place, plus a simple app to manage stock and orders. In Phase 1 our target is to onboard 120+ D2C fashion brands across South India, in women's and men's wear, footwear, beauty and lifestyle, alongside independent designers.</p>
       </details>
       <details class="faq-item">
         <summary>How does Flynker make money?</summary>
@@ -870,11 +1024,11 @@
       </details>
       <details class="faq-item">
         <summary>What will ₹1.5 Cr achieve?</summary>
-        <p>18 months of runway to launch all four apps, onboard 120+ brands and the first creator cohorts, and prove with data that the flywheel lowers returns and marketing cost. Split: 40% product and AI, 30% designer and creator acquisition, 20% team, 10% operations, legal and buffer. Those milestones make Flynker seed-ready.</p>
+        <p>18 months of runway to launch all four apps, onboard 120+ brands and the first creator cohorts, and prove with data that the flywheel lowers returns and marketing cost. Split: 40% product and AI, 30% brand and creator acquisition, 20% team, 10% operations, legal and buffer. Those milestones make Flynker seed-ready.</p>
       </details>
       <details class="faq-item">
         <summary>What are the biggest risks, and how do you handle them?</summary>
-        <p>Three: creators not joining, brands not listing, and the RTO reduction being smaller than we expect. We handle them by paying creators only on delivery (no cash burned on creators who don't sell), starting with handloom clusters we can reach in person, and testing every change on our own live store before scaling it. We share real numbers in monthly investor updates, good or bad.</p>
+        <p>Three: creators not joining, brands not listing, and the RTO reduction being smaller than we expect. We handle them by paying creators only on delivery (no cash burned on creators who don't sell), starting with South Indian D2C brands we can meet in person, and testing every change on our own live store before scaling it. We share real numbers in monthly investor updates, good or bad.</p>
       </details>
     </div>
     <p class="faq-more" data-reveal>Another question? <a href="https://calendly.com/tharunkarthikeya98/30min" target="_blank" rel="noopener">Ask us on a founder call</a>.</p>
@@ -902,6 +1056,7 @@
 </footer>
 
 <script src="script.js?v=20261024d"></script>
+<script src="capsule.js?v=20261113a"></script>
 <!-- Flynker AI host: guided tour + voice Q&A via the Apps Script relay (see bot/SETUP.md) -->
 <script src="bot.js?v=20261101a" data-endpoint="https://script.google.com/macros/s/AKfycbzNYm9iKJdsVcHbnKpTQTa661XCrOS4Je6xo9QJ3iUh0Huc3T0YBUss_RA4BVqX7oZHug/exec"></script>
 </body>
