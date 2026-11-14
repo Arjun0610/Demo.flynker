@@ -7,7 +7,7 @@
 
   const CALL = 'https://calendly.com/tharunkarthikeya98/30min';
   const LABELS = { top: 'Welcome', capsule: 'Flynk to full basket', shift: 'The shift', problem: 'The problem', engines: 'Our two engines', flywheel: 'The flywheel',
-    product: 'The product', ecosystem: 'Four apps', creators: 'Creators & designers', moat: 'Why we win', model: 'Go-to-market & revenue',
+    product: 'The product', ecosystem: 'Four apps', creators: 'Creators & designers', designers: 'Designers', moat: 'Why we win', model: 'Go-to-market & revenue',
     roadmap: 'Built so far', ask: 'The ask', team: 'The team', faq: 'Your questions' };
   const SILENT = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YQAAAAA=';
   const store = {
@@ -20,7 +20,7 @@
 
   let mode = 'tour';            // tour | qa
   let state = 'idle';           // idle | thinking | speaking | listening | paused
-  let step = 0, total = 15, tourDone = store.get('fb_tour_done') === true;
+  let step = 0, total = 16, tourDone = store.get('fb_tour_done') === true;
   let busy = false, runId = 0;
   const steps = {};             // step index -> promise of relay data (prefetch)
 
