@@ -75,7 +75,7 @@
   const dock = $('.fb-dock'), caption = $('.fb-caption'), where = $('.fb-where'), bar = $('.fb-progress i');
   const ppBtn = $('.fb-pp'), nextBtn = $('.fb-next'), askBtn = $('.fb-ask'), replayBtn = $('.fb-replay');
   const typeForm = $('.fb-type'), typeInput = typeForm.querySelector('input');
-  const QUESTIONS = ['What is Flynker?', 'How are you different from Myntra or Meesho?', 'Why can’t competitors copy you?',
+  const QUESTIONS = ['What is Flynker?', 'Why can Flynker be a unicorn?', 'How are you different from Myntra or Meesho?', 'Why can’t competitors copy you?',
     'Why should we invest now?', 'What will the ₹1.5 crore achieve?', 'How do you make money?', 'Who is the team?'];
   const chips = $('.fb-chips');
   QUESTIONS.forEach(function (q) {
@@ -372,7 +372,7 @@
       if (document.documentElement.classList.contains('fb-open')) return;
       const b = document.createElement('div');
       b.className = 'fb-hello';
-      b.innerHTML = '<b>Hi, I\'m Flynker AI.</b> Tap here and I\'ll walk you through Flynker in 3 minutes, then answer your questions.<button type="button" aria-label="Dismiss">×</button>';
+      b.innerHTML = '<b>Hi, I\'m Flynker AI.</b> Tap here to hear what we\'re building and why it can be a billion-dollar company, then ask me anything.<button type="button" aria-label="Dismiss">×</button>';
       b.addEventListener('click', function (e) {
         if (e.target.tagName === 'BUTTON') { b.remove(); store.set('fb_hello_seen', true); } else { open(); }
       });
